@@ -2,6 +2,11 @@
 	<h1>Bem vindo <?php echo $_SESSION['nick']; ?></h1>
 
 	<h3>Seus personagens</h3>
+	<?php if (isset($_SESSION['ficha'])): ?>
+	<p>Personagem selecionado no momento: <b><?php echo $_SESSION['ficha']; ?></b>. Para mudar de personagem, basta abrir o ficha do personagem escolhido.</p>
+	<?php else: ?>
+	<p>Nenhum personagem foi selecionado. Você não pode visualizar nenhum inventário.</p>
+	<?php endif ?>
 	<div class="row">
 	 	<div class="col-md-12 text-left">            
 		  	<table class="table table-bordered table-hover">
