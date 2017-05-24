@@ -7,6 +7,8 @@ Isso significa que o mestre não tem como saber o tipo de item que seus jogadore
 
 A versão 4.0 foi totalmente reprogramada e por causa disso preferi colocá-la em um novo repositório. O repositório antigo ainda existe e mantêm o seu mesmo endereço antigo. Só preferi mantê-lo para que as pessoas pudessem visualizar as melhorias que o site veio tendo ao longo do tempo.
 
+Endereço atual do site: http://dungeonevolution.uphero.com/
+
 Melhorias
 =========
 
