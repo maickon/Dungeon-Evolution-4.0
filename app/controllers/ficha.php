@@ -195,7 +195,7 @@ class Ficha_Controller extends Controller_Core {
 
 	function visualizar_inventario(){
 		@session_start();
-		if (isset($_SESSION['nick'])) {
+		if (isset($_SESSION['nick']) and isset($_SESSION['ficha'])) {
 			$caminho = PATH_BASE.'config/db/xml/usuarios/'.$_SESSION['chave'].'/fichas/'.md5($_SESSION['ficha']).'/inventario/';
 			if (file_exists($caminho)) {
 				$inventario_xml = [];

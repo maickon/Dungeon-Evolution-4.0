@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inventario>
+	<item>
+		<id>17575435925925b2f1ab8168.37951078</id>
+		<nome>Luvas de Combate</nome>
+		<tipo>Luvas</tipo>
+		<nivel>1</nivel>
+		<raridade>comum</raridade>
+		<encaixes>0</encaixes>
+		<pedras_encaixadas>0</pedras_encaixadas>
+		<preco_compra>227</preco_compra>
+	</item>
+</inventario>
