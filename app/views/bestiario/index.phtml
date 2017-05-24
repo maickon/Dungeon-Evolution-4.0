@@ -1,0 +1,199 @@
+<div class="col-sm-8 text-left">
+	<div class="row">
+		<div class="col-md-12">
+			<br>
+			<h2>Bestiário</h2>
+	 		<p>Crie seus monstros para a sua aventura.</p>
+		</div>
+	</div>
+	<div class="row">
+		<form method="post">
+		  	<div class="col-md-3">
+				<label for="tipo">Tipo:</label>
+				<select class="form-control" id="tipo" name="tipo">
+					<option value="sorteado">Sorteado</option>
+					<option value="aberracao">Aberração</option>
+					<option value="animal">Animal</option>
+					<option value="anjo">Anjo</option>
+					<option value="constructo">Constructo</option>
+					<option value="demonio">Demônio</option>
+					<option value="dragao">Dragão</option>
+					<option value="espirito">Espítiro</option>
+					<option value="fada">Fada</option>
+					<option value="gigante">Gigante</option>
+					<option value="humanoide" selected="true">Humanóide</option>
+					<option value="inseto">Inseto</option>
+					<option value="monstro">Monstro</option>
+					<option value="morto-vivo">Morto-vivo</option>
+					<option value="planta">Planta</option>
+				</select>
+
+			</div>
+			
+			<div class="col-md-3">
+				<label for="tamanho">Tamanho:</label>
+				<select class="form-control" id="tamanho" name="tamanho">
+					<option value="sorteado">Sorteado</option>
+					<option value="infimo">Ínfimo</option>
+					<option value="diminuto">Diminuto</option>
+					<option value="minimo">Mínimo</option>
+					<option value="pequeo">Pequeno</option>
+					<option value="medio" selected="true">Médio</option>
+					<option value="grande">Grande</option>
+					<option value="enorme">Enorme</option>
+					<option value="descomunal">Descomunal</option>
+					<option value="colossal">Colossal</option>
+				</select>
+			</div>
+
+			<div class="col-md-2">
+				<label for="nivel_fixo">Nível fixo:</label>
+				<select class="form-control" id="nivel_fixo" name="nivel_fixo">
+					<option value="sim">Sim</option>
+					<option value="nao">Não</option>
+				</select>
+			</div>
+
+			<div class="col-md-2">
+				<label for="rolagem_fixa">Rolagem fixa:</label>
+				<select class="form-control" id="rolagem_fixa" name="rolagem_fixa">
+					<option value="sim">Sim</option>
+					<option value="nao" selected="true">Não</option>
+				</select>
+			</div>
+
+			<div class="col-md-2">
+				<label for="distribuicao_fixa">Distrib. fixa:</label>
+				<select class="form-control" id="distribuicao_fixa" name="distribuicao_fixa">
+					<option value="sim">Sim</option>
+					<option value="nao" selected="true">Não</option>
+				</select>
+			</div>
+
+			<div class="col-md-2">
+				<label for="dado_de_rolagem">Progressão:</label>
+				<select class="form-control" id="dado_de_rolagem" name="dado_de_rolagem">
+					<option value="4">d4</option>
+					<option value="6" selected="true">d6</option>
+					<option value="8">d8</option>
+					<option value="10">d10</option>
+					<option value="12">d12</option>
+					<option value="20">d20</option>
+					<option value="30">d30</option>
+					<option value="40">d40</option>
+					<option value="50">d50</option>
+					<option value="60">d60</option>
+					<option value="70">d70</option>
+					<option value="80">d80</option>
+					<option value="90">d90</option>
+					<option value="100">d100</option>
+				</select>
+			</div>
+
+			<div class="col-md-3">
+				<label for="raridade">Raridade da criaura:</label>
+				<select class="form-control" id="raridade" name="raridade">
+	    			<option value="sorteado">Sorteado</option>
+	    			<option value="comum">Comum</option>
+	    			<option value="magico">Mágico</option>
+	    			<option value="raro">Raro</option>
+	    			<option value="lendario">Lendário</option>
+	    			<option value="unico">Único</option>
+				</select>
+			</div>
+				
+		 	<div class="col-md-1">
+				<label for="nivel">Nível</label>
+				<input class="form-control center" maxlength="2" value="1" id="nivel" type="text" name="nivel">
+			</div>
+
+			<div class="col-md-1">
+				<label for="quantidade">Qtd</label>
+				<input class="form-control center" maxlength="2" value="1" id="quantidade" type="text" name="quantidade">
+			</div>
+			
+			<div class="col-md-2">
+				<label for="gerar_monstros"><br></label>
+				<br>
+				<input type="submit" name="gerar_monstros" value="Gerar Monstros" class="btn btn-default">
+			</div>
+			<br>
+			<br>
+		</form>
+	</div>
+
+	<div class="col-md-12">
+		<br>
+	</div>
+	<?php 
+	
+		$raridade_css_lista = ['magico'=>'mag','comum'=>'com','raro'=>'rar','lendario'=>'len','unico'=>'uni'];
+		foreach ($criaturas as $key => $value) {
+			$raridade_css = $raridade_css_lista[$value->_get('raridade')];
+			echo '
+			<div class="list-group col-md-12 '.$raridade_css.'">
+				<div class="col-md-12">
+					<div class="titulo">'			.ucfirst($value->_get('tipo')).		'</div>
+				</div>
+				<div class="col-md-4">
+					<div><b> Tamanho </b>'			.ucfirst($value->_get('tamanho')).	'</div>
+				</div>
+				<div class="col-md-4">
+					<div><b> Deslocamento </b>'		.$value->_get('deslocamento').		'</div>
+				</div>
+				<div class="col-md-4">
+					<div><b> Lv </b>'				.$value->_get('nivel').				'</div>
+				</div>
+				<div class="col-md-4">
+					<div><b> Raridade: </b>'		.ucfirst($value->_get('raridade')).	'</div>
+				</div>
+				<div class="col-md-4">
+			  		<div><b> Altura: </b>'			.$value->_get('altura').			'</div>
+				</div>
+				<div class="col-md-4">
+			  		<div><b> Vida: </b>'			.$value->_get('vida').				'</div>
+				</div>
+				<div class="col-md-4">
+			  		<div><b> Mana: </b>'			.$value->_get('mana').				'</div>
+				</div>
+				<div class="col-md-4">
+			  		<div><b> Defesa: </b>'			.$value->_get('defesa').			'</div>
+				</div>
+				<div class="col-md-4">
+			  		<div><b> Dano: </b>'			.$value->_get('dano').				'</div>
+				</div>
+				<div class="col-md-4">
+			  		<div><b> Esquiva: </b>'			.$value->_get('esquiva').			'%</div>
+				</div>
+				<div class="col-md-4">
+			  		<div><b> Crítico Natural: </b>'	.$value->_get('critico_nat').		'%</div>
+				</div>
+				<div class="col-md-4">
+			  		<div><b> Crítico Induzido: </b>'.$value->_get('critico_indz').		'%</div>
+				</div>
+				<div class="col-md-12">
+			  		<div class="titulo"> 			Descrição					 		</div>
+			  		<p class="descricao-anel">'.$value->_get('descricao').	'</p>
+				</div>
+				';
+				echo '
+				<div class="col-md-12">
+				  	<div class="titulo"> 			Caracteristicas						</div>';
+
+				foreach ($value->_get('caracteristicas') as $key2 => $value2) {
+					  		echo '<p>'.$value2.	'</p>';
+				}
+				echo '</div>';
+
+				echo '
+				<div class="col-md-12">
+				  	<div class="titulo"> 			Habilidades							</div>';
+
+				foreach ($value->_get('habilidades') as $key3 => $value3) {
+					  		echo '<p><b>'.$value3['nome'].'</b><br>'.$value3['descricao'].	'</p>';
+				}
+				echo '</div>
+				</div>';
+		}
+	?>
+</div>

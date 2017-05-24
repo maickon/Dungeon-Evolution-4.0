@@ -1,0 +1,309 @@
+<div class="col-sm-8 text-left">
+	<div class="row">
+		<div class="col-md-12">
+			<br>
+	  		<p id="<?php echo $css_msg; ?>"><?php echo $msg; ?></p>
+			<h2>Ficha</h2>
+	 		<p>Preencha os dados da sua ficha ou carregue uma para ser visualizada no site.</p>
+		</div>
+	  	<form method="post">
+		  	<div class="col-md-12 menu_ficha">
+				<input type="submit" name="salvar" value="Salvar Ficha" class="btn btn-default">
+			</div>
+		  	<div class="col-md-3">
+				<label for="ficha_classe">Classe:</label>
+				<select class="form-control" id="ficha_classe" name="ficha_classe">
+					<option value="combatente">Combatente</option>
+					<option value="conjurador">Conjurador</option>
+				</select>
+			</div>
+
+			<div class="col-md-3">
+				<label for="ficha_especializacao">Especialização:</label>
+				<select class="form-control" id="ficha_especializacao" name="ficha_especializacao">
+					<option value="assassino">Assassino</option>
+					<option value="algoz">Algoz</option>
+					<option value="barbaro">Bárbaro</option>
+					<option value="guerreiro">Guerreiro</option>
+					<option value="ladrao">Ladrão</option>
+					<option value="mago_fogo">Mago do Fogo</option>
+					<option value="mago">Mago</option>
+					<option value="mago_gelo">Mago do Gelo</option>
+					<option value="mago_raio">Mago dos Raios</option>
+					<option value="monge">Monge</option>
+					<option value="necromante">Necromante</option>
+					<option value="ninja">Ninja</option>
+					<option value="paladino">Paladino</option>
+					<option value="pirata">Pirata</option>
+					<option value="ranger">Ranger</option>
+					<option value="samurai">Samurai</option>
+				</select>
+			</div>
+
+		 	<div class="col-md-1">
+				<label for="ficha_nivel">Nível</label>
+				<input class="form-control center" maxlength="2" value="1" id="ficha_nivel" type="text" name="ficha_nivel">
+			</div>
+
+			<div class="col-md-3">
+				<label for="ficha_xp">Xp</label>
+				<input class="form-control center" maxlength="8" value="0" id="ficha_xp" type="text" name="ficha_xp">
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_deslocamento">Deslocamento</label>
+				<input class="form-control center" value="10" id="ficha_deslocamento" type="text" name="ficha_deslocamento">
+			</div>
+
+			<div class="col-md-4">
+				<label for="ficha_nome">Nome</label>
+				<input class="form-control center" value="" required="true" id="ficha_nome" type="text" name="ficha_nome">
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_dinheiro">Dinheiro</label>
+				<input class="form-control center" value="0" id="ficha_dinheiro" type="text" name="ficha_dinheiro">
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_altura">Altura</label>
+				<input class="form-control center" value="" id="ficha_altura" type="text" name="ficha_altura">
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_peso">Peso</label>
+				<input class="form-control center" value="" id="ficha_peso" type="text" name="ficha_peso">
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_idade">Idade</label>
+				<input class="form-control center" value="" id="ficha_idade" type="text" name="ficha_idade">
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_vida_base">Vida</label>
+				<input class="form-control center" maxlength="8" value="0" id="ficha_vida_base" type="text" name="ficha_vida_base">
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_defesa_base">Defesa</label>
+				<input class="form-control center" maxlength="8" value="0" id="ficha_defesa_base" type="text" name="ficha_defesa_base">
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_dano_base">Dano</label>
+				<input class="form-control center" maxlength="8" value="0" id="ficha_dano_base" type="text" name="ficha_dano_base">
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_mana_base">Mana</label>
+				<input class="form-control center" maxlength="8" value="0" id="ficha_mana_base" type="text" name="ficha_mana_base">
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_critico_nat_base">Crítico Natural</label>
+				<input class="form-control center" maxlength="8" value="0" id="ficha_critico_nat_base" type="text" name="ficha_critico_nat_base">
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_critico_indz_indz_base">Crítico Induzido</label>
+				<input class="form-control center" maxlength="8" value="0" id="ficha_critico_indz_base" type="text" name="ficha_critico_indz_base">
+			</div>
+
+
+			<div class="col-md-12">
+				<label for="ficha_descricao">Descrição (Coloque palavras chave que definam o seu personagem e algumas características fisicas)</label>
+				<input class="form-control" value="" id="ficha_descricao" type="text" name="ficha_descricao">
+			</div>
+			
+			<div class="col-md-12">
+				<br>
+				<label for="ficha_mag_hab" id="label_ficha_historia">História do personagem</label>
+				<span class="glyphicon glyphicon-eye-open" id="show_hist"></span> -
+				<span class="glyphicon glyphicon-eye-close" id="hide_hist"></span>
+				<textarea class="form-control" style="display:none; height: 500px;" name="ficha_historia" id="ficha_historia"></textarea>
+			</div>
+
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-md-6">
+						<label for="ficha_critico_nat" class="hab_label">Crítico Natural</label>
+			    		<input class="form-control input-lg" readonly="true" name="ficha_critico_nat" id="ficha_critico_nat" value="0" type="text">
+					</div>
+					<div class="col-md-6">
+						<label for="ficha_critico_indz" class="hab_label">Crítico Induzido</label>
+			    		<input class="form-control input-lg" readonly="true" name="ficha_critico_indz" id="ficha_critico_indz" value="0" type="text">
+					</div>
+				</div>			
+	
+				<div class="row">
+					<div class="col-md-6">
+						<label for="ficha_vida" class="hab_label">Vida</label>
+			    		<input class="form-control input-lg" readonly="true" name="ficha_vida" id="ficha_vida" value="0" type="text">
+					</div>
+					<div class="col-md-6">
+						<label for="ficha_dano" class="hab_label">Dano</label>
+			    		<input class="form-control input-lg" readonly="true" name="ficha_dano" id="ficha_dano" value="0" type="text">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-6">
+						<label for="ficha_defesa" class="hab_label">Defesa</label>
+			    		<input class="form-control input-lg" readonly="true" name="ficha_defesa" id="ficha_defesa" value="0" type="text">
+					</div>
+					<div class="col-md-6">
+						<label for="ficha_mana" class="hab_label">Mana</label>
+			    		<input class="form-control input-lg" readonly="true" name="ficha_mana" id="ficha_mana" value="0" type="text">
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-8">
+				<br>
+				<label for="ficha_mag_hab">Magias/Habilidades</label>
+				<textarea class="form-control" style="height: 250px;"></textarea>
+			</div>
+			
+			<div class="col-md-2">
+				<label for="ficha_vida" class="bonus">Bônus +%Vida</label>
+	    		<input class="form-control input-sm" name="porcentagem_ficha_vida" id="porcentagem_ficha_vida" value="0" type="text">
+
+	    		<label for="ficha_defesa" class="bonus">Bônus +%Defesa</label>
+	    		<input class="form-control input-sm" name="porcentagem_ficha_defesa" id="porcentagem_ficha_defesa" value="0" type="text">
+			</div>
+
+			<div class="col-md-2">
+	    		<label for="ficha_dano" class="bonus">Bônus +%Dano</label>
+	    		<input class="form-control input-sm" name="porcentagem_ficha_dano" id="porcentagem_ficha_dano" value="0" type="text">
+
+	    		<label for="ficha_mana" class="bonus">Bônus +%Mana</label>
+	    		<input class="form-control input-sm" name="porcentagem_ficha_mana" id="porcentagem_ficha_mana" value="0" type="text">
+			</div>
+
+			<div class="col-md-8">
+				<br>
+				<label for="ficha_pericias">Perícias</label>
+				<textarea class="form-control" name="ficha_pericias" style="height: 100px;"></textarea>
+			</div>
+
+			<div class="col-md-2">
+				<label for="ficha_vida" class="bonus">Bônus fixo +Vida</label>
+	    		<input class="form-control input-sm" name="bonus_fixo_ficha_vida" id="bonus_fixo_ficha_vida" value="0" type="text">
+
+	    		<label for="ficha_defesa" class="bonus">Bônus fixo +Def</label>
+	    		<input class="form-control input-sm" name="bonus_fixo_ficha_defesa" id="bonus_fixo_ficha_defesa" value="0" type="text">
+			</div>
+
+			<div class="col-md-2">
+	    		<label for="ficha_dano" class="bonus">Bônus fixo +Dano</label>
+	    		<input class="form-control input-sm" name="bonus_fixo_ficha_dano" id="bonus_fixo_ficha_dano" value="0" type="text">
+
+	    		<label for="ficha_mana" class="bonus">Bônus fixo +Mana</label>
+	    		<input class="form-control input-sm" name="bonus_fixo_ficha_mana" id="bonus_fixo_ficha_mana" value="0" type="text">
+			</div>
+			
+			<div class="col-md-8">
+				<br>
+				<label for="ficha_pericias">Anotações</label>
+				<textarea class="form-control" name="ficha_anotacoes" style="height: 100px;"></textarea>
+			</div>
+
+			<?php foreach ($itens as $key => $value): ?>
+				<div class="col-md-12 item_ficha" id="<?php echo $key; ?>_item">
+					<div class="row">
+						<div class="col-md-5">
+							<label for="ficha_arma_nome" id="hide_arma"><?php echo $value; ?></label>
+							<input class="form-control input-sm" value="" id="ficha_<?php echo $key; ?>_nome" type="text" name="<?php echo $key; ?>[nome]">
+						</div>
+						<div class="col-md-1">
+							<label for="ficha_<?php echo $key; ?>_lv">Lv</label>
+							<input class="form-control input-sm center" maxlength="2" value="0" id="ficha_<?php echo $key; ?>_lv" type="text" name="<?php echo $key; ?>[lv]">
+						</div>
+						<div class="col-md-2">
+							<label for="ficha_raridade_<?php echo $key; ?>">Raridade:</label>
+							<select class="form-control input-sm" id="ficha_raridade_<?php echo $key; ?>" name="<?php echo $key; ?>[raridade]">
+								<option value="comum">Comum</option>
+								<option value="magico">Mágico</option>
+								<option value="raro">Raro</option>
+								<option value="lendario">Lendário</option>
+								<option value="unico">Único</option>
+							</select>
+						</div>
+						<div class="col-md-2">
+							<?php if ($key != 'arma1' and $key != 'arma2'): ?>
+							<label for="ficha_tipo_<?php echo $key; ?>">Tipo:</label>
+							<input class="form-control input-sm" value="<?php echo $value; ?>" id="ficha_tipo_<?php echo $key; ?>" type="text" name="<?php echo $key; ?>[tipo]">
+							<?php else: ?>
+							<label for="ficha_tipo_<?php echo $key; ?>">Tipo:</label>
+							<select class="form-control input-sm" id="ficha_tipo_<?php echo $key; ?>" name="<?php echo $key; ?>[tipo]">
+								<option value="uma">Uma mão</option>
+								<option value="duas">Duas mãos</option>
+							</select>
+							<?php endif ?>
+						</div>
+						<?php if ($key == 'anel1' || $key == 'anel2'): ?>
+						<div class="col-md-2">
+							<label for="ficha_bonus_<?php echo $key; ?>">+Dano</label>
+							<input class="form-control input-sm" value="0" id="ficha_bonus_dano_<?php echo $key; ?>" type="number" name="<?php echo $key; ?>[bonus_dano]">
+						</div>
+						<div class="col-md-2">
+							<label for="ficha_bonus_<?php echo $key; ?>">+Vida</label>
+							<input class="form-control input-sm" value="0" id="ficha_bonus_vida_<?php echo $key; ?>" type="number" name="<?php echo $key; ?>[bonus_vida]">
+						</div>
+						<div class="col-md-2">
+							<label for="ficha_bonus_<?php echo $key; ?>">+Def</label>
+							<input class="form-control input-sm" value="0" id="ficha_bonus_def_<?php echo $key; ?>" type="number" name="<?php echo $key; ?>[bonus_def]">
+						</div>
+						<div class="col-md-2">
+							<label for="ficha_bonus_<?php echo $key; ?>">+Mana</label>
+							<input class="form-control input-sm" value="0" id="ficha_bonus_mana_<?php echo $key; ?>" type="number" name="<?php echo $key; ?>[bonus_mana]">
+						</div>
+						<?php else: ?>
+						<div class="col-md-2">
+							<label for="ficha_bonus_<?php echo $key; ?>">Bônus</label>
+							<input class="form-control input-sm center" value="0" id="ficha_bonus_<?php echo $key; ?>" type="number" name="<?php echo $key; ?>[bonus]">
+						</div>
+						<?php endif ?>
+						<div class="col-md-3">
+							<label for="ficha_preco_compra_<?php echo $key; ?>">Preço de compra</label>
+							<input class="form-control input-sm center" value="0" id="ficha_preco_compra_<?php echo $key; ?>" type="number" name="<?php echo $key; ?>[compra]">
+						</div>
+						<div class="col-md-3">
+							<label for="ficha_preco_venda_<?php echo $key; ?>">Preço de venda</label>
+							<input class="form-control input-sm center" value="0" id="ficha_preco_venda_<?php echo $key; ?>" type="number" name="<?php echo $key; ?>[venda]">
+						</div>
+						<div class="col-md-2">
+							<label for="ficha_encaixes_<?php echo $key; ?>">Encaixes:</label>
+							<select class="form-control input-sm" id="ficha_encaixes_<?php echo $key; ?>" name="<?php echo $key; ?>[encaixes]">
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+						<div class="col-md-3">
+							<label for="ficha_pedras_encaixadas_<?php echo $key; ?>">Pedras encaixadas:</label>
+							<select class="form-control input-sm" id="ficha_pedras_encaixadas_<?php echo $key; ?>" name="<?php echo $key; ?>[pedras_encaixadas]">
+								<option value="0">0</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							</select>
+						</div>
+						<?php if ($key == 'anel1' || $key == 'anel2'): ?>
+						<div class="col-md-7">
+							<label for="ficha_descricao_<?php echo $key; ?>">Descricao breve</label>
+							<input class="form-control input-sm" value="" id="ficha_descricao_<?php echo $key; ?>" type="text" name="<?php echo $key; ?>[descricao]">
+						</div>
+						<?php endif ?>
+						<div id="<?php echo $key; ?>_pedras" class="col-md-12">
+							
+						</div>
+					</div>
+					
+				</div>
+			<?php endforeach ?>
+	  	</form>
+	</div>
+</div>

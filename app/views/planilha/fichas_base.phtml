@@ -1,0 +1,89 @@
+<style type="text/css">
+	.pts{	
+		background-color: #a9a9a9;
+	}
+	.atributos{
+		background-color: #c9c9c9;
+		color: white;
+	}
+	.pv{
+		
+		background-color: green;
+	}
+
+	.def{
+		background-color: brown;
+	}
+
+	.dano{
+		background-color: red;
+	}
+
+	.mana{
+		background-color: blue;
+	}
+	.borda{
+		border: 1px solid #FFF;
+	}
+	.borda:hover{
+		opacity: 0.5;
+	}
+	.fichas{
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+	}
+</style>
+
+<div class="col-sm-8 text-left">
+	<br>
+	<form method="post">
+    	<div class="form-horizontal row">
+	    	<div class="col-md-12">
+				<div class="col-md-2">
+					<label for="progressao_fixa">Progressão:</label>
+					<select class="form-control" id="progressao_fixa" name="progressao_fixa">
+		    			<option value="rolado">Rolada</option>
+		    			<option value="fixo">Fixa</option>
+					</select>
+				</div>
+				<div class="col-md-3">
+					<label for="classe">Classe:</label>
+					<select class="form-control" id="classe" name="classe">
+		    			<option value="combatente">Combatente</option>
+		    			<option value="conjurador">Conjurador</option>
+					</select>
+				</div>
+				<div class="col-md-2">
+					<label for="distribuicao">Distribuição:</label>
+					<select class="form-control" id="distribuicao" name="distribuicao">
+		    			<option value="igual">Igual</option>
+		    			<option value="sorteado">Sorteado</option>
+					</select>
+				</div>
+				<div class="col-md-2">
+					<label for="dado_de_progressao">Dado:</label>
+					<select class="form-control" id="dado_de_progressao" name="dado_de_progressao">
+		    			<option value="4">5d4</option>
+		    			<option value="6" selected>5d6</option>
+		    			<option value="8">5d8</option>
+		    			<option value="10">5d10</option>
+		    			<option value="12">5d12</option>
+		    			<option value="20">5d20</option>
+					</select>
+				</div>
+				<div class="col-md-1">
+					<label for="nivel">Nível</label>
+					<input class="form-control" maxlength="2" value="3" id="nivel" type="text" name="nivel">
+				</div>
+				<div class="col-md-2">
+					<label for="botao"><br></label>
+					<br>
+					<input type="submit" name="gerar" value="Gerar Fichas" class="btn btn-default">
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<?php echo $html_template; ?>
+</div>

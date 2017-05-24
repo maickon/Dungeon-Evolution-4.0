@@ -1,0 +1,24 @@
+<div class="col-sm-8 text-left">
+	<div class="table-responsive">
+  		<h2>Itens de compra</h2>
+	 	<p>Preço de objetos comuns, imóveis, estadias e etc.</p>            
+	  	<table class="table table-bordered table-hover">
+		    <thead>
+		     	<tr>
+		        	<th>Nome</th>
+		        	<th>Descrição</th>
+		        	<th>Preço</th>
+		      	</tr>
+		    </thead>
+		    <tbody>
+		    <?php foreach ($tabela as $key => $value): ?>
+		    	<tr>
+		        	<td><?php echo $value['nome']; ?></td>
+		        	<td><?php echo $value['descricao']; ?></td>
+		        	<td><?php echo  number_format($value['preco'], 2, ',', '.').' gold'; ?></td>
+		      	</tr>
+		    <?php endforeach ?>
+		    </tbody>
+	  	</table>
+	</div>
+</div>

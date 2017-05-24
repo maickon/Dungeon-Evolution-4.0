@@ -1,0 +1,173 @@
+<html>
+	<head>
+		<title><?php echo isset($this->meta_title)?$this->meta_title:''; ?></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="<?php echo isset($this->meta_description)?$this->meta_description:''; ?>" />
+		<meta name="keywords" content="<?php echo isset($this->meta_keywords)?$this->meta_keywords:''; ?>" />
+		<meta name="author" content="Maickon Rangel">
+		<link rel="icon" type="image/png" sizes="144x144" href="<?php echo URL_BASE; ?>app/assets/img/evolution.png">
+		<link rel="stylesheet" href="<?php echo URL_BASE; ?>app/assets/css/bootstrap.css">
+		<link rel="stylesheet" href="<?php echo URL_BASE; ?>app/assets/css/index.css">
+	  	<script src="<?php echo URL_BASE; ?>app/assets/js/jquery.js"></script>
+	  	<script src="<?php echo URL_BASE; ?>app/assets/js/index.js"></script>
+	  	<script src="<?php echo URL_BASE; ?>app/assets/js/html2canvas.js"></script>
+	  	<script src="<?php echo URL_BASE; ?>app/assets/js/bootstrap.js"></script>
+		<?php echo isset($this->css_links)?$this->css_links:''; ?>
+		<?php echo isset($this->css_base)?$this->css_base:''; ?>
+	</head>
+	<body>
+		<style>
+	    /* Remove the navbar's default margin-bottom and rounded borders */ 
+	    .navbar {
+	      margin-bottom: 0;
+	      border-radius: 0;
+	    }
+	    
+	    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+	    .row.content {height: 450px}
+	    
+	    /* Set gray background color and 100% height */
+	    .sidenav {
+	      padding-top: 20px;
+	      background-color: #f1f1f1;
+	      height: auto;
+	    }
+	    
+	    /* Set black background color, white text and some padding */
+	    footer {
+	      background-color: #555;
+	      color: white;
+	      padding: 15px;
+	    }
+	    
+	    /* On small screens, set height to 'auto' for sidenav and grid */
+	    @media screen and (max-width: 767px) {
+	      .sidenav {
+	        height: auto;
+	        padding: 15px;
+	      }
+	      .row.content {height:auto;} 
+	    }
+	  </style>
+
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>                        
+		      </button>
+		      <a class="navbar-brand" href="<?php echo URL_BASE; ?>">
+		      	<img class="logo" src="<?php echo URL_BASE ?>app/assets/img/logo.png">
+		      </a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="myNavbar">
+		      <ul class="nav navbar-nav">
+		        <li><a href="<?php echo URL_BASE.'home/dropar_itens'; ?>">Dropar iens</a></li>
+		        <li><a href="<?php echo URL_BASE.'home/tabela_xp'; ?>">Tabela de Xp</a></li>
+		        <li><a href="<?php echo URL_BASE.'home/tabela_xp_inimigos'; ?>">Tabela de Xp dos inimigos</a></li>
+		        <li><a href="<?php echo URL_BASE.'home/calcular_xp'; ?>">Calcular diferença de Xp</a></li>
+		        <li><a href="<?php echo URL_BASE.'sobre'; ?>">Sobre</a></li>
+		        <li><a href="<?php echo URL_BASE.'app/assets/pdf/Dungeon Evolution-4.0.pdf'; ?>">Download</a></li>
+		       <!--  <li><a href="#">Download</a></li>
+		        <li><a href="#">Contato</a></li> -->
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		      	<?php if (isset($_SESSION['nick'])): ?>
+		        <li><a href="<?php echo URL_BASE.'home/logout'; ?>"><span class="glyphicon glyphicon-log-in"></span> Sair</a></li>
+		      	<?php else: ?>
+		        <li><a href="<?php echo URL_BASE.'home/sessao'; ?>"><span class="glyphicon glyphicon-log-in"></span> Criar conta</a></li>
+		      	<?php endif; ?>
+		      </ul>
+		    </div>
+		  </div>
+		</nav>
+		
+		<div class="container-fluid text-center">    
+			<div class="row content">
+		    	<div class="col-sm-2 sidenav">
+		      		<div class="list-group">
+		      			<?php if (isset($_SESSION['nick'])): ?>
+						<a href="<?php echo URL_BASE.'home/painel'; ?>" class="list-group-item">Meus Personagens</a>
+						<a href="<?php echo URL_BASE.'ficha'; ?>" class="list-group-item">Criar Ficha</a>
+		      			<?php endif; ?>
+						<a href="<?php echo URL_BASE.'home/dropar_itens'; ?>" class="list-group-item">Dropar Itens</a>
+						<a href="<?php echo URL_BASE.'planilha'; ?>" class="list-group-item">Itens mundanos</a>
+						<a href="<?php echo URL_BASE.'planilha/fichas_base'; ?>" class="list-group-item">Fichas Base</a>
+						<a href="<?php echo URL_BASE.'bestiario/'; ?>" class="list-group-item">Bestiário</a>
+						<a href="<?php echo URL_BASE.'planilha/pocoes'; ?>" class="list-group-item">Comprar Poções</a>
+						<a href="<?php echo URL_BASE.'planilha/pedras'; ?>" class="list-group-item">Comprar Pedras</a>
+						<a href="#" class="list-group-item" name="arma_de_uma_mao" onclick="set_option(this);">Dropar Armas de uma mão</a>
+						<a href="#" class="list-group-item" name="arma_de_duas_maos" onclick="set_option(this);">Dropar Armas de duas mãos</a>
+						<a href="#" class="list-group-item" name="armaduras" onclick="set_option(this);">Dropar Armaduras</a>
+						<a href="#" class="list-group-item" name="aneis" onclick="set_option(this);">Dropar Anéis</a>
+						<a href="#" class="list-group-item" name="botas" onclick="set_option(this);">Dropar Botas</a>
+						<a href="#" class="list-group-item" name="calcas" onclick="set_option(this);">Dropar Calças</a>
+						<a href="#" class="list-group-item" name="capacetes" onclick="set_option(this);">Dropar Capacetes</a>
+						<a href="#" class="list-group-item" name="escudos" onclick="set_option(this);">Dropar Escudos</a>
+						<a href="#" class="list-group-item" name="luvas" onclick="set_option(this);">Dropar Luvas</a>
+						<a href="#" class="list-group-item" name="ombreiras" onclick="set_option(this);">Dropar Ombreiras</a>
+						<a href="#" class="list-group-item" id="exportar">Exportar Imagem</a>
+						<a href="#" class="list-group-item" id="download">Dowload da Imagem</a>
+					</div>
+		    	</div>
+				
+				<?php require_once $this->controller_content(); ?>
+				
+				<div class="col-sm-2 sidenav">
+					<div class="well">
+						<p>
+							<div id="counter">
+								<a href="http://www.webcontadores.com" target="_Blank" title="Visitantes">
+									Visitantes Únicos
+								</a>
+								<br> 
+								<script type="text/javascript" src="https://counter10.fcs.ovh/private/counter.js?c=yfn9ay7lzehhgm5wag2y4dphpshzeymj&FCS_coef=0.5"></script>
+								<noscript><a href="https://www.webcontadores.com" title="contador para blog"><img src="https://counter10.fcs.ovh/private/webcontadores.php?c=yfn9ay7lzehhgm5wag2y4dphpshzeymj" class="img-responsive" border="0" title="contador para blog" alt="contador para blog"></a></noscript>
+								<br>
+							</div>
+						</p>
+					</div>
+					<div class="well">
+						<p>
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						<!-- ads_help_responsivo_01 -->
+						<ins class="adsbygoogle"
+						     style="display:block"
+						     data-ad-client="ca-pub-3010334569259161"
+						     data-ad-slot="7650926539"
+						     data-ad-format="auto"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+						</p>
+					</div>
+					<!-- <div class="well">
+						<p>
+						<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+						ads_help_responsivo_01
+						<ins class="adsbygoogle"
+						     style="display:block"
+						     data-ad-client="ca-pub-3010334569259161"
+						     data-ad-slot="7650926539"
+						     data-ad-format="auto"></ins>
+						<script>
+						(adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+						</p>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	
+		<footer class="container-fluid text-center footer">
+		  <p>Dungeon Evolution &copy 2014 - <?php echo date("Y"); ?></p>
+		  <p>Desenvolvimento do site e criação do rpg por <a class="link" href="https://www.facebook.com/profile.php?id=100014683899960" target="black">Maickon Rangel</a></p>
+		</footer>
+
+	<?php echo isset($this->js_links)?$this->js_links:''; ?>
+	<?php echo isset($this->js_base)?$this->js_base:''; ?>
+	
+	</body>
+</html>

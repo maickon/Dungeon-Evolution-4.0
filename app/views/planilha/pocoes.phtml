@@ -1,0 +1,90 @@
+<div class="col-sm-8 text-left">
+	<br>
+	<form method="post">
+    	<div class="form-horizontal row">
+	    	<div class="col-md-12">
+				<div class="col-md-3">
+					<label for="raridade">Raridade:</label>
+					<select class="form-control" id="raridade" name="raridade">
+		    			<option value="todas_as_raridades">Todos</option>
+		    			<option value="comum">Comum</option>
+		    			<option value="mágico">Mágico</option>
+		    			<option value="raro">Raro</option>
+		    			<option value="lendário">Lendário</option>
+		    			<option value="único">Único</option>
+					</select>
+				</div>
+				<div class="col-md-3">
+					<label for="tipo">Tipo:</label>
+					<select class="form-control" id="tipo" name="tipo">
+		    			<option value="todas_as_pocoes">Todos</option>
+		    			<option value="cura">Cura</option>
+		    			<option value="remover_veneno">Remover veneno</option>
+		    			<option value="remover_cegueira">Remover cegueira</option>
+		    			<option value="remover_doença">Remover doença</option>
+		    			<option value="mana">Mana</option>
+					</select>
+				</div>
+				<div class="col-md-2">
+				<label for="nivel_fixo">Lv fixo:</label>
+					<select class="form-control" id="nivel_fixo" name="nivel_fixo">
+		    			<option value="nao">Não</option>
+		    			<option value="sim">Sim</option>
+					</select>
+				</div>
+				<div class="col-md-1">
+					<label for="quantidade">Qtd</label>
+					<input class="form-control" maxlength="2" value="4" id="quantidade" type="text" name="qtd">
+				</div>
+				<div class="col-md-1">
+					<label for="nivel">Nível</label>
+					<input class="form-control" maxlength="2" value="3" id="nivel" type="text" name="nivel">
+				</div>
+				<div class="col-md-2">
+					<label for="botao"><br></label>
+					<br>
+					<input type="submit" name="gerar" value="Sortear Poções" class="btn btn-default">
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<?php 
+		$raridade_css_lista = ['mágico'=>'mag','comum'=>'com','raro'=>'rar','lendário'=>'len','único'=>'uni'];
+		foreach ($exibir_pocoes as $key => $value) {
+			$raridade_css = $raridade_css_lista[$value->_get('raridade')];
+			$preco = number_format($value->_get('preco'), 2, ',', '.').' gold';
+			$preco_venda = number_format(intval($value->_get('preco')/2), 2, ',', '.').' gold';
+			echo '
+			<div class="list-group col-md-12 '.$raridade_css.'">
+				<div class="col-md-3">
+					<div class="titulo">'			.$value->_get('nome').				'</div>
+					<div><b> Lv </b>'				.$value->_get('nivel').				'</div>
+					<div><b> Raridade: </b>'		.$value->_get('raridade').			'</div>
+			  		<div><b> Compra: </b>'			.$preco.							'</div>
+			  		<div><b> Venda: </b>'			.$preco_venda.						'</div>
+				</div>
+				
+				<div class="col-md-9 descricao-anel">
+					<div><b> Descricao: </b>'		.$value->_get('descricao').	'</div>
+				</div>';
+				if (isset($_SESSION['nick']) and isset($_SESSION['ficha'])) {
+					echo '
+					<div class="col-md-12">
+						<br>
+	  					<form action="'.URL_BASE.'ficha/inventario" method="post" target="_blank">
+	  						<input type="hidden" name="item[id]" value="'.uniqid(mt_rand(), true).'">
+							<input type="hidden" name="item[nome]" value="'.$value->_get('nome').'">
+							<input type="hidden" name="item[nivel]" value="'.$value->_get('nivel').'">
+							<input type="hidden" name="item[tipo]" value="pocoes">
+							<input type="hidden" name="item[raridade]" value="'.$value->_get('raridade').'">
+							<input type="hidden" name="item[preco_compra]" value="'.$value->_get('preco').'">
+							<input type="hidden" name="item[descricao]" value="'.$value->_get('descricao').'">
+		  					<input type="submit" name="add" value="Add ao iventário" class="btn btn-default">
+	  					</form>
+	  				</div>';
+	  			}
+			echo '</div>';
+		}
+	?>
+</div>

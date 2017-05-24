@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<arma_duas_maos>
+	<nome>Espada Curta</nome>
+	<nome>Espada de Assassinos</nome>
+	<nome>Espada Curta Italiana</nome>
+	<nome>Espada Francesa</nome>
+	<nome>Espada Holandesa</nome>
+	<nome>Arbach</nome>
+	<nome>Falcione</nome>
+	<nome>Falcione Austríaco</nome>
+	<nome>Falcione Italiano</nome>
+	<nome>Cutlass</nome>
+	<nome>Dusagge Naval</nome>
+	<nome>Dusagge de Infantaria</nome>
+	<nome>Espada Cabo Cesta</nome>
+	<nome>Espada Africana</nome>
+	<nome>Espada Bárbara</nome>
+	<nome>Espada Bastarda</nome>
+	<nome>Espada da Justiça</nome>
+	<nome>Rondrakamm</nome>
+	<nome>Flamberge</nome>
+	<nome>Sabre</nome>
+	<nome>Sabre Escocês</nome>
+	<nome>Sabre de Piratas</nome>
+	<nome>Sabre de Amazonas</nome>
+	<nome>Hunger</nome>
+	<nome>Florete</nome>
+	<nome>Gládio</nome>
+	<nome>Rapier</nome>
+	<nome>Rapier de Duelos</nome>
+	<nome>Rapier de Piratas</nome>
+	<nome>Florete</nome>
+	<nome>Florete de Magos</nome>
+	<nome>Espada Maçônica</nome>
+	<nome>Zarabatana</nome>
+	<nome>Garrote</nome>
+	<nome>Nunchaku</nome>
+	<nome>Faca</nome>
+	<nome>Faca de pedra</nome>
+	<nome>Faca de caça</nome>
+	<nome>Navaja</nome>
+	<nome>Foice</nome>
+	<nome>Foice Druídica</nome>
+	<nome>Baselard</nome>
+	<nome>Drachenzahn(Dente de Dragão)</nome>
+	<nome>Holbein</nome>
+	<nome>Eberfanfer(Presas de Javali)</nome>
+	<nome>Rondel</nome>
+	<nome>Ear Rondel</nome>
+	<nome>Cinquedea</nome>
+	<nome>Garra de Basilisco</nome>
+	<nome>Adaga Suiça</nome>
+	<nome>Adaga Germânica</nome>
+	<nome>Adaga da Floresta</nome>
+	<nome>Adaga de Prata</nome>
+	<nome>Adaga de Arremesso</nome>
+	<nome>Main Gaunche</nome>
+	<nome>Canhestro</nome>
+	<nome>Hauswehren</nome>
+	<nome>Punhal</nome>
+	<nome>Punhal Mexicano</nome>
+	<nome>Punhal Longo</nome>
+	<nome>Punhal Escocês</nome>
+	<nome>Punhal Espada</nome>
+	<nome>Machete</nome>
+	<nome>Machadinha</nome>
+	<nome>Machado de Mão</nome>
+	<nome>Machado de Lenhador</nome>
+	<nome>Orknase</nome>
+	<nome>Machado de Arremesso</nome>
+	<nome>Machado de Ponta</nome>
+	<nome>Machado Navalha</nome>
+	<nome>Machado Sinuoso</nome>
+	<nome>Machado Militar</nome>
+	<nome>Machado de Batalha Curvo</nome>
+	<nome>Machado de Batalha Reto</nome>
+	<nome>Machado Bárbaro</nome>
+	<nome>Thorwaler</nome>
+	<nome>Machado Molok</nome>
+	<nome>Stonecutter</nome>
+	<nome>chicote</nome>
+	<nome>Gato de Nove Caudas (Chicote)</nome>
+	<nome>Maquarri (Chicote)</nome>
+	<nome>Raposa de Nove caudas (Chicote)</nome>
+	<nome>Chicote de Lâmina</nome>
+	<nome>Chicote Navalha</nome>
+	<nome>Besta leve</nome>
+	<nome>Mangual</nome>
+	<nome>Mangual de Guerra</nome>
+	<nome>Mangual Metálico</nome>
+	<nome>Mangual Duplo</nome>
+	<nome>Mangual Triplo</nome>
+	<nome>Mangual Militar</nome>
+	<nome>Mangual de Corrente</nome>
+	<nome>Corrente com Bola</nome>
+	<nome>Mangual de Gancho	</nome>
+	<nome>Clava</nome>
+	<nome>Clava de Pedra</nome>
+	<nome>Clava Espinho</nome>
+	<nome>Maça de Exército</nome>
+	<nome>Maça de Guerra</nome>
+	<nome>Morningstar</nome>
+	<nome>Maça Germânica</nome>
+	<nome>Porrete</nome>
+	<nome>Bastão</nome>
+	<nome>Soqueira</nome>
+	<nome>Espada longa</nome>
+	<nome>Katana</nome>
+	<nome>Bastão</nome>
+	<nome>Martelo de Guerra</nome>
+	<nome>Martelo Ritual</nome>
+	<nome>Martelo de Duas Cabeças</nome>
+	<nome>Awl Pike</nome>
+	<nome>Martelo Cabeça de Corvo</nome>
+	<nome>Gruufhai</nome>
+	<nome>Lança</nome>
+	<nome>Lança de Golpe</nome>
+	<nome>Lança de Mão</nome>
+	<nome>Pike</nome>
+	<nome>Lança Molok</nome>
+	<nome>8Lança de Mão Sem Ponta</nome>
+	<nome>Tridente Ritual</nome>
+	<nome>Dreizak</nome>
+	<nome>Arpão de Pesca</nome>
+	<nome>Lança de Arremesso</nome>
+	<nome>Lança de Duas Pontas</nome>
+	<nome>Tridente</nome>
+	<nome>Sturmsense</nome>
+	<nome>Lança de Guerra</nome>
+	<nome>Halberd Longo1</nome>
+	<nome>Glefe</nome>
+	<nome>Schnitter</nome>
+	<nome>Lança Machado</nome>
+	<nome>Lança Mata Dragão</nome>
+	<nome>Lança de Caça</nome>
+	<nome>Lança de Haken</nome>
+	<nome>Lança de Justa</nome>
+	<nome>Pailos</nome>
+	<nome>Dragonlance</nome>
+	<nome>Soqueira</nome>
+	<nome>Soqueira com Garras</nome>
+	<nome>Soqueira com Espinhos</nome>
+	<nome>Naginata</nome>
+	<nome>Jitte</nome>
+	<nome>Espada Semehada</nome>
+	<nome>Dragon Blade</nome>
+	<nome>Claymore</nome>
+	<nome>Dragonslayer +10 de dano contra dragões</nome>
+	<nome>Slayer</nome>
+	<nome>Ice Blade +10 de dano de gelo</nome>
+	<nome>Flame Sword +10 de dano de fogo</nome>
+	<nome>Royal Sword</nome>
+	<nome>Barbarossa</nome>
+	<nome>Jang'do</nome>
+	<nome>Kunai</nome>
+	<nome>Nuntchaku de Madeira</nome>
+	<nome>Nuntchaku de Metal</nome>
+	<nome>Nuntchaku de Prata</nome>
+	<nome>Machado Escarlate </nome>
+	<nome>Machado Demoniaco </nome>
+	<nome>Machado de Ouro </nome>
+	<nome>Machado Incandescente +10 de dano de Fogo</nome>
+	<nome>Execultor</nome>
+	<nome>Machado Sagrado +10 de dano Sagrado</nome>
+	<nome>Machado Duplo</nome>
+	<nome>Machado do Caos +10 de dano do Caos</nome>
+	<nome>Machado de Órion +10 de dano de Luz</nome>
+	<nome>Francisca</nome>
+	<nome>Caçador de Bestas</nome>
+	<nome>Machado Vulcânico +10 de dano de Fogo</nome>
+	<nome>Machado Estigio </nome>
+	<nome>Machado Titânico</nome>
+	<nome>Machado do Trovão +10 de dano Elétrico </nome>
+	<nome>Machado Dracônico</nome>
+	<nome>Machado do Zodiaco +5 em todos os atributos</nome>
+	<nome>Hakujin Khukri</nome>
+	<nome>Yagyu Darkblade</nome>
+	<nome>Kusanagi</nome>
+	<nome>Kagenu</nome>
+	<nome>Espada de Iga</nome>
+	<nome>Ashura</nome>
+	<nome>Orochi</nome>
+	<nome>Espada de Koga</nome>
+	<nome>Sakura Saezuri</nome>
+	<nome>Chokuto</nome>
+	<nome>Kantana Raitoningu</nome>
+	<nome>Nodachi Wakizashi</nome>
+	<nome>Kogarasumaru</nome>
+	<nome>Shirasaya</nome>
+	<nome>Yakei</nome>
+	<nome>Masamune</nome>
+	<nome>Kiku Ichimonji</nome>
+	<nome>Zambatou</nome>
+	<nome>Kotetsu</nome>
+	<nome>Osafune</nome>
+	<nome>Murasame</nome>
+	<nome>Muramasa</nome>
+	<nome>Ame no Murakumo</nome>
+	<nome>Magorok</nome>
+</arma_duas_maos>

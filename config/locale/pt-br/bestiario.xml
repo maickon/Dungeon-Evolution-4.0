@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bestiario>
+
+	<animal>
+		<vida>5</vida>
+		<dano>2</dano>
+		<defesa>7</defesa>
+		<mana>1</mana>
+		<descricao>A maior parte dos animais reais conhecidos (cães, gatos, cavalos...) também existe no mundo. No entanto, a influência de forças mágicas e deuses caprichosos também provocou o surgimento de bestas espantosas. De modo geral, animais são todos os seres vivos sem inteligência suficiente para desenvolver uma linguagem, e sem habilidades sobrenaturais. Um animal inteligente, ou com poderes mágicos, é considerado um monstro.</descricao>
+		<caracteristicas>
+			<detalhes>Tendencia sempre neutra.</detalhes>
+			<detalhes>Não possuem inteligência.</detalhes>
+			<detalhes>Possuem visão na penumbra 18m.</detalhes>
+			<detalhes>Teste de fortitude +3 e teste de vigor +3.</detalhes>
+		</caracteristicas>
+	</animal>
+
+	<constructo>
+		<vida>25</vida>
+		<dano>10</dano>
+		<defesa>30</defesa>
+		<mana>1</mana>
+		<descricao>São objetos animados ou criaturas fabricadas artificialmente, seja através de magia, seja através de ciência. Normalmente, construtos não possuem inteligência real, em vez disso, são programados para realizar apenas certas tarefas (como proteger um lugar).</descricao>
+		<caracteristicas>
+			<detalhes>Imunidade a atordoamento, penalidade de habilidade, dano não-letal, doença, encantamento, fadiga, paralisia, magias de necromancia, sono, veneno, crítico natural e induzido.</detalhes>
+			<detalhes>Não precisam respirar, se alimentar e dormir.</detalhes>
+			<detalhes>Destruídos quando seus PV chegam a 0. Um construto destruído não pode ser revivido (pois nem estava vivo em primeiro lugar).</detalhes>
+			<detalhes>Visão no escuro 18m</detalhes>
+		</caracteristicas>
+	</constructo>
+
+	<humanoide>
+		<vida>10</vida>
+		<dano>10</dano>
+		<defesa>10</defesa>
+		<mana>10</mana>
+		<descricao>Este grupo inclui membros de raças que lembram os humanos, com a mesma anatomia básica. Têm cabeça, tronco, dois bra-ços e duas pernas. Ou quase tudo isso. Todos os humanóides são inteligentes, com sua própria linguagem, cultura e sociedade — mesmo seres monstruosos como os ogros e trogs.</descricao>
+		<caracteristicas>
+			<detalhes>Nenhuma.</detalhes>
+		</caracteristicas>
+	</humanoide>
+
+	<espirito>
+		<vida>5</vida>
+		<dano>1</dano>
+		<defesa>8</defesa>
+		<mana>10</mana>
+		<descricao>Espíritos são seres nativos de outros planos — lugares muito além do plano material. Têm uma profunda conexão com as energias primais do multiverso, desde os próprios elementos até as forças primordiais do bem, mal, ordem e caos. Diferente de outras criaturas, espíritos não possuem uma natureza dualista — seu corpo e alma são um só. Assim, quando um espí-rito morre, sua alma não abandona o corpo; em vez disso, é destruída. Por isso, espíritos não podem ser revividos por meios convencionais.</descricao>
+		<caracteristicas>
+			<detalhes>Magias que revivem os mortos não afetam espíritos.</detalhes>
+			<detalhes>Visão no escuro 9m.</detalhes>
+		</caracteristicas>
+	</espirito>
+
+	<monstro>
+		<vida>15</vida>
+		<dano>10</dano>
+		<defesa>10</defesa>
+		<mana>5</mana>
+		<descricao>Essas criaturas são semelhantes aos animais, mas podem apresentar valores intelectuais. Os monstros costumam possuir habilidades sobrenaturais e extraordinárias, mas algumas vezes só apresentam aparência ou hábitos bizarros.</descricao>
+		<caracteristicas>
+			<detalhes>Podem possuir itenligência.</detalhes>
+			<detalhes>Precisam se alimentar, dormir e respirar.</detalhes>
+			<detalhes>Visão no escuro 18m e visão na penumbra 18m.</detalhes>
+			<detalhes>Teste de vigor e reflexos +4.</detalhes>
+		</caracteristicas>
+	</monstro>
+
+	<morto-vivo>
+		<vida>5</vida>
+		<dano>5</dano>
+		<defesa>5</defesa>
+		<mana>1</mana>
+		<descricao>Estas criaturas existem em variedade fantástica — parece haver tantos tipos de mortos-vivos quanto de seres vivos. Alguns não apenas conservam a inteligência que tinham em vida, mas também a superam. Outros ficam insanos, presos a recordações passadas. Mas quase todos perdem toda e qualquer capacidade de pensar. Debates sobre a “moralidade” dos mortos-vivos são constantes entre os acadêmicos. A maior parte destas criaturas não é capaz de processos racionais — portanto, não poderiam fazer escolhas boas ou más, certas ou erradas. Só fazem aquilo que foram ordenados a fazer por seus criadores. No entanto, quando não estão sob controle de alguém, sua tendência é atacar e devorar os vivos. Este é o caso de mortos-vivos encontrados em masmorras e lugares assombrados.</descricao>
+		<caracteristicas>
+			<detalhes>Imunidade a atordoamento, dano não letal, doença, encantamento, fadiga, paralisia, sono e veneno.</detalhes>
+			<detalhes>Não precisam respirar, se alimentar e dormir.</detalhes>
+			<detalhes>Recebem +3 em teste de resistência de força de vontade.</detalhes>
+			<detalhes>Sofrem dano com magias de cura e recuperam pontos de vida com magias de necromancia.</detalhes>
+			<detalhes>Destruídos quando seus PV chegam a 0. Um morto-vivo destruído não pode ser revivido. Somente magias que trazem o morto-vivo realmente de volta a vida como ele era antes de se transformar em morto-vivo.</detalhes>
+			<detalhes>Visão no escuro 18m.</detalhes>
+		</caracteristicas>
+	</morto-vivo>
+	
+	<aberracao>
+		<vida>8</vida>
+		<dano>3</dano>
+		<defesa>7</defesa>
+		<mana>10</mana>
+		<descricao>Uma criatura que apresenta uma anatomia bizarra, habilidades estranhas, raciocínio alienígena ou qualquer combinação dos três. Normalmente são criaturas que apresentam aparência e comportamento bem diferente dos demais.</descricao>
+		<caracteristicas>
+			<detalhes>Resitência de força de vontade +5.</detalhes>
+			<detalhes>Visão no escuro 18m.</detalhes>
+			<detalhes>Precisam se alimentar, dormir e respirar.</detalhes>
+		</caracteristicas>
+	</aberracao>
+
+	<anjo>
+		<vida>45</vida>
+		<dano>55</dano>
+		<defesa>60</defesa>
+		<mana>50</mana>
+		<descricao>Trata-se de uma raça de celestiais, extra-planares bondosos, nativos dos planos exteriores com esta tendência. Anjos são incrívelmente poderosos. Seu poder chega a ser até 5 vezes superior a de um humano poderoso.</descricao>
+		<caracteristicas>
+			<detalhes>Visão no escuro 18m e visão na penumbra 18m.</detalhes>
+			<detalhes>Imunidade a ácido, frio e petrificação.</detalhes>
+			<detalhes>Resistência a eletricidade e fogo 50%.</detalhes>
+			<detalhes>+5 em teste de resistência de vigor contra venenos.</detalhes>
+			<detalhes>Aura da Proteção (habilidade sobrenatural): +5% de esquiva, +10% na defesa e + nos testes de resistência contra ataques, habilidades ou magias proveniente de seres malignos.</detalhes>
+		</caracteristicas>
+	</anjo>
+
+	<dragao>
+		<vida>85</vida>
+		<dano>70</dano>
+		<defesa>80</defesa>
+		<mana>75</mana>
+		<descricao>São criaturas similares a répteis, geralmente aladas e dotadas de habilidades mágicas e incomuns. Dragões na grande maioria são bem inteligentes e possuem um poder devastador.</descricao>
+		<caracteristicas>
+			<detalhes>Possuem inteligência e dominam uma linguagem falada.</detalhes>
+			<detalhes>Visão no escuro 18m e visão na penumbra 18m.</detalhes>
+			<detalhes>Precisam se alimentar, dormir e respirar.</detalhes>
+			<detalhes>Imunidade contra efeitos mágicos de sono e qualquer tipo de paralisia.</detalhes>
+			<detalhes>+5 em teste de resistência de vigor, força de vontade e reflexos.</detalhes>
+			<detalhes>+5 em perícia intimidar.</detalhes>
+			<detalhes>Capacidade de vôo com deslocamento igual ao seu deslocamento base.</detalhes>
+		</caracteristicas>
+	</dragao>
+
+	<fada>
+		<vida>6</vida>
+		<dano>8</dano>
+		<defesa>5</defesa>
+		<mana>30</mana>
+		<descricao>São criaturas dotadas de habilidades sobrenaturais e ligações com a atureza ou com alguma outra força ou local. As fadas costumam a assemelhar-se a humanóides.</descricao>
+		<caracteristicas>
+			<detalhes>Visão na penumbra 18m.</detalhes>
+			<detalhes>Precisam se alimentar, dormir e respirar.</detalhes>
+			<detalhes>+4 em teste de resistência força de vontade e reflexos.</detalhes>
+			<detalhes>Capacidade de vôo com deslocamento igual ao seu deslocamento base.</detalhes>
+		</caracteristicas>
+	</fada>
+
+	<gigante>
+		<vida>28</vida>
+		<dano>36</dano>
+		<defesa>27</defesa>
+		<mana>10</mana>
+		<descricao>Criaturas similares a humanóides, dotados de grande força e geralmente de tamanho grande ou maior.</descricao>
+		<caracteristicas>
+			<detalhes>Visão na penumbra 18m.</detalhes>
+			<detalhes>Precisam se alimentar, dormir e respirar.</detalhes>
+			<detalhes>+4 em teste de resistência de vigor.</detalhes>
+		</caracteristicas>
+	</gigante>
+
+	<inseto>
+		<vida>8</vida>
+		<dano>8</dano>
+		<defesa>14</defesa>
+		<mana>3</mana>
+		<descricao>Estas criaturas incluem todos os tipos de insetos como aracnídeos e outros artrópodes, vermes e invertebrados similares.</descricao>
+		<caracteristicas>
+			<detalhes>Visão na penumbra 18m.</detalhes>
+			<detalhes>Precisam se alimentar, dormir e respirar.</detalhes>
+			<detalhes>+4 em teste de resistência de vigor.</detalhes>
+			<detalhes>Insetos são irracionais por padrão. São imunes a todos os efeitos de ação mental independente de sua origem.</detalhes>
+		</caracteristicas>
+	</inseto>
+
+	<planta>
+		<vida>10</vida>
+		<dano>7</dano>
+		<defesa>15</defesa>
+		<mana>5</mana>
+		<descricao>Abrange todas as criaturas vegetais. Note que as plantas comuns, como aquelas encontradas nos campos e jardins não são consideradas como criaturas. Apenas criaturas que conseguem assumir inteligência ou que se comporte como uma criatura irracional são abrangidas por este tipo.</descricao>
+		<caracteristicas>
+			<detalhes>Visão na penumbra 18m.</detalhes>
+			<detalhes>Imunidade a todos os efeitos de ação mental independente de sua origem.</detalhes>
+			<detalhes>Imunidade a sono, veneno, paralisia, metamorfose e atordoamento.</detalhes>
+			<detalhes>Precisam se alimentar, dormir e respirar.</detalhes>
+			<detalhes>+5 em teste de resistência de vigor.</detalhes>
+			<detalhes>Insetos são irracionais por padrão. São imunes a todos os efeitos de ação mental independente de sua origem.</detalhes>
+		</caracteristicas>
+	</planta>
+
+	<demonio>
+		<vida>35</vida>
+		<dano>60</dano>
+		<defesa>50</defesa>
+		<mana>50</mana>
+		<descricao>Demônios são criaturas malignas de planos inferiores. Causam dor, aniquilação e sofrimento por puro prazer. São criaturas sem senso moral com criaturas que sejam mais fracas do que eles. São muito poderosos e são inimigos naturais dos anjos.</descricao>
+		<caracteristicas>
+			<detalhes>Imunidade a fogo e veneno.</detalhes>
+			<detalhes>Resistência a ácido e frio 50%.</detalhes>
+			<detalhes>Enxergar no escuro (habilidade sobrenatural): Todos os demônios podem enxergar perfeitamente em qualquer tipo de escuridão.</detalhes>
+			<detalhes>Telepatia (habilidade sobrenatural): Todos os demônios podem se comunicar telepaticamente com outros seres que eles possam ver.</detalhes>
+		</caracteristicas>
+	</demonio>
+</bestiario>

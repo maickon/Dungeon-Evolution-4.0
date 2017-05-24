@@ -1,0 +1,217 @@
+.titulo{
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.logo{
+	position: relative;
+	bottom: 5px;
+	width: 100px;
+	margin: 0px;
+}
+
+.pedra-titulo{
+	text-align: center;
+	font-weight: bold;
+}
+
+.item-descricao{
+	float: left;
+	width: 25%;
+	border: 1px solid black;
+}
+
+.pedras{
+	position: relative;
+	width: 25%;
+	margin-left: 39%;
+	padding: 5px;
+}
+
+.descricao-predra{
+	float: left;
+	width: 25%;
+	position: relative;
+	padding: 5px;
+	border-style: groove;
+	border-radius: 5px;
+}
+
+.descricao-anel{
+	padding: 5px;
+	padding-right: 5px;
+	text-align: justify;
+}
+
+.com{
+	border-radius: 4px;
+	padding: 4px;
+	border-style: groove;
+	background: #D3D3D3; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#D3D3D3, #F0F8FF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#D3D3D3, #F0F8FF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#D3D3D3, #F0F8FF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#D3D3D3, #F0F8FF); /* Standard syntax */
+}
+
+.mag{
+	border-radius: 4px;
+	padding: 4px;
+	border-style: groove;
+    background: #4682B4; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#4682B4, #D1EEEE); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4682B4, #D1EEEE); /* For outline: ;pera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4682B4, #D1EEEE); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4682B4, #D1EEEE); /* Standard syntax */
+}
+
+.rar{
+	border-radius: 4px;
+	padding: 4px;
+	border-style: groove;
+    background: #FF7F24; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FF7F24, #FFA54F); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FF7F24, #FFA54F); /* For outline: ;pera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FF7F24, #FFA54F); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FF7F24, #FFA54F); /* Standard syntax */
+}
+
+.len{
+	border-radius: 4px;
+	padding: 4px;
+	border-style: groove;
+    background: #CDAD00; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#CDAD00, #EEEE00); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#CDAD00, #EEEE00); /* For outline: ;pera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#CDAD00, #EEEE00); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#CDAD00, #EEEE00); /* Standard syntax */
+}
+
+.uni{
+	border-radius: 4px;
+	padding: 4px;
+	border-style: groove;
+    background: #CD2626; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#CD2626, #FA8072); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#CD2626, #FA8072); /* For outline: ;pera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#CD2626, #FA8072); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#CD2626, #FA8072); /* Standard syntax */
+}
+
+.rubi{
+	color: red;
+}
+
+.esmeralda{
+	color: green;
+}
+
+.safira {
+	color: blue;
+}
+
+.topazio{
+	color: gold;
+}
+
+.ametista{
+	color: purple;
+}
+
+.diamante{
+	color: darkorchid;
+}
+
+.opala{
+	color: black;
+}
+
+.link:hover{
+	text-decoration: none;
+}
+
+.footer{
+	background-color: #000;
+}
+
+.hab_label{
+	margin-top: 20px;
+	text-align: center;
+	width: 100%;
+}
+
+.pericia{
+	margin-top: 5px;
+}
+
+#ficha_vida, #ficha_dano, #ficha_defesa, #ficha_mana, #porcentagem_ficha_vida, #porcentagem_ficha_dano, #porcentagem_ficha_defesa, 
+#porcentagem_ficha_mana, #bonus_fixo_ficha_vida, #bonus_fixo_ficha_dano, #bonus_fixo_ficha_defesa, #bonus_fixo_ficha_mana,
+#ficha_critico_nat, #ficha_critico_indz{
+	border: none;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+#ficha_critico_nat{
+	background-color: #2E8B57;
+}
+
+#ficha_critico_indz{
+	background-color: #3CB371;
+}
+
+#ficha_vida, #porcentagem_ficha_vida, #bonus_fixo_ficha_vida{
+	background-color: green;
+}
+
+#ficha_dano, #porcentagem_ficha_dano, #bonus_fixo_ficha_dano{
+	background-color: red;
+}
+
+#ficha_defesa, #porcentagem_ficha_defesa, #bonus_fixo_ficha_defesa{
+	background-color: brown;
+}
+
+#ficha_mana, #porcentagem_ficha_mana, #bonus_fixo_ficha_mana{
+	background-color: blue;
+}
+
+.menu_ficha{
+	margin-bottom: 5px;
+}
+
+.item_ficha{
+	/* padding: 5px; */
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border-style: groove;
+	border-radius: 5px;
+}
+
+.center{
+	text-align: center;
+}
+
+#invalido{
+	color: red;
+}
+
+#valido{
+	color: green;
+}
+
+#hide_hist{
+	cursor: pointer;
+}
+
+#show_hist{
+	cursor: pointer;
+}
+
+.bonus{
+	font-size: 12px;
+	text-align: center;
+	width: 100%;
+}

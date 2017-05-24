@@ -1,0 +1,91 @@
+<div class="col-sm-8 text-left">
+	<br>
+	<form method="post">
+    	<div class="form-horizontal row">
+	    	<div class="col-md-12">
+				<div class="col-md-3">
+					<label for="raridade">Raridade:</label>
+					<select class="form-control" id="raridade" name="raridade">
+		    			<option value="todas_as_raridades">Todos</option>
+		    			<option value="comum">Comum</option>
+		    			<option value="mágico">Mágico</option>
+		    			<option value="raro">Raro</option>
+		    			<option value="lendário">Lendário</option>
+		    			<option value="único">Único</option>
+					</select>
+				</div>
+				<div class="col-md-3">
+					<label for="tipo">Tipo:</label>
+					<select class="form-control" id="tipo" name="tipo">
+		    			<option value="todas_as_pedras">Todas</option>
+		    			<option value="rubi" class="rubi">Rubi (dano, experiência)</option>
+		    			<option value="esmeralda" class="esmeralda">Esmeralda (esquiva, crítico induzido)</option>
+		    			<option value="safira" class="safira">Safira (vida, defesa)</option>
+		    			<option value="topazio" class="topazio">Topázio (dano[magias], mana)</option>
+		    			<option value="ametista" class="ametista">Ametista (dano[habilidades], mana)</option>
+		    			<option value="diamante" class="diamante">Diamante (dinheiro, drop level)</option>
+		    			<option value="opala" class="opala">Opala (qualquer habilidade)</option>
+					</select>
+				</div>
+				<div class="col-md-2">
+				<label for="nivel_fixo">Lv fixo:</label>
+					<select class="form-control" id="nivel_fixo" name="nivel_fixo">
+		    			<option value="nao">Não</option>
+		    			<option value="sim">Sim</option>
+					</select>
+				</div>
+				<div class="col-md-1">
+					<label for="quantidade">Qtd</label>
+					<input class="form-control" maxlength="2" value="4" id="quantidade" type="text" name="qtd">
+				</div>
+				<div class="col-md-1">
+					<label for="nivel">Nível</label>
+					<input class="form-control" maxlength="2" value="3" id="nivel" type="text" name="nivel">
+				</div>
+				<div class="col-md-2">
+					<label for="botao"><br></label>
+					<br>
+					<input type="submit" name="gerar" value="Sortear Poções" class="btn btn-default">
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<div class="row">
+		<div class="col-md-12" id="exportar-itens">
+		<?php 
+		$raridade_css_lista = ['mágico'=>'mag','comum'=>'com','raro'=>'rar','lendário'=>'len','único'=>'uni'];
+		foreach ($exibir_pedras as $key => $value) {
+			$raridade_css = $raridade_css_lista[$value->_get('raridade')];
+			$preco = number_format($value->_get('preco'), 2, ',', '.').' gold';
+			echo '
+			<div class="list-group col-md-12 '.$raridade_css.'">
+				<div class="col-md-3">
+				</div>';
+			echo $value->pedra_show('col-md-6');
+			if (isset($_SESSION['nick']) and isset($_SESSION['ficha'])) {
+				$habilidades = $value->_get('habilidades');
+				echo '
+				<div class="col-md-12">
+				<br>
+  				<form action="'.URL_BASE.'ficha/inventario" method="post" target="_blank">
+  					<input type="hidden" name="item[id]" value="'.uniqid(mt_rand(), true).'">
+					<input type="hidden" name="item[nome]" value="'.$value->_get('nome').'">
+					<input type="hidden" name="item[nivel]" value="'.$value->_get('nivel').'">
+					<input type="hidden" name="item[tipo]" value="pedras">
+					<input type="hidden" name="item[raridade]" value="'.$value->_get('raridade').'">
+					<input type="hidden" name="item[preco_compra]" value="'.$value->_get('preco').'">';
+				foreach ($habilidades as $pedras_key2 => $pedras_value2) {
+					echo '<input type="hidden" name="item[habilidade'.$pedras_key2.']" value="'.$pedras_value2.'">';
+				}
+  				echo '
+  					<input type="submit" name="add" value="Add ao iventário" class="btn btn-default">
+  					</form>
+  				</div>';
+	  		}
+			echo '</div>';
+		}
+		?>
+		</div>
+	</div>
+</div>

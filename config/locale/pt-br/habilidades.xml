@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<habilidades>
+	<habilidade>
+		<nome>Agarrar</nome>
+		<descricao>Ao invés de atacar a criatura pode tentar agarrar a sua vítima. Nesta manobra o alvo de agarrar deve fazer um teste de escapar CD 15. Se passar no teste você não é agarrado pela criatura, caso perca estará imobilizado pela criatura. A cada rodada enquanto estiver agarrado o alvo poderá fazer um novo teste de escapar CD 15 na sua vez. Se ele perder, perderá a sua ação. Caso consiga sair, poderá fazer a sua ação normalmente na rodada. Para agarra um alvo a criatura precisa ser de categoria igual ou maior para poder agarrar a sua vítima. Se a criatura tiver duas categorias de tamanho acima de sua vítima a sua defesa não é alterada, do contrário sua defesa será reduzida pela metade contra ataques de terceiros enquanto estiver mantendo uma criatura presa em sua manobra. </descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Ataque Sônico</nome>
+		<descricao>A criatura consegue causar um ataque sônico a partir de um grito em forma de um cone que alcanca até 9m +1m por nível. O dano causado é 100% do seu dano. Custo de mana 30.</descricao>
+	</habilidade>
+	
+	<habilidade>
+		<nome>Ataque visual</nome>
+		<descricao>Um raio vermelho sai dos olhos da criatura e é capaz de afetar um alvo a até 12m+1m/nível. O ataque causa 50% do seu dano. Custo de mana 20.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Atropelar</nome>
+		<descricao>Criaturas de categoria de tamanho inferior a da criatura sofrem o dobro do dano referente ao nível. O nível é o dano causado direto na vida sem redução da defesa.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Bote</nome>
+		<descricao>Esta criatura não rola iniciativa. Somente quando se iniciar um combate a criatura atacará primeiro o seu alvo e ele terá a sua defesa reduzida pela metade.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Engolir</nome>
+		<descricao>Criatura que são de 3 categorias de tamanho infeior a esta criatura podem ser engolidas por ela. A criatura apenas realiza um ataque que visa engolir o seu alvo. O alvo deve fazer um teste de reflexos CD 14 para escapar. Se perder será engolido, do contrário conseguirá escapar. Uma criatura engolida morre em meia hora caso ela não seja retirada.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Investida Poderosa</nome>
+		<descricao>Criaturas com esta habilidade podem causar um ataque a cada 1d4 de rodadas que causa +200% de dano. O ataque é fisico.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Rugido</nome>
+		<descricao>Um rugido afeta uma área de até 9m. Criaturas dentro desta área devem fazer um teste de vontade CD 12 para não ficarem paralisadas por 1d4 de rodadas. Custo de mana 20.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Sopro</nome>
+		<descricao>A criatura lança um sopro de um tipo de energia específica a escolha do mestre. Esta energia afeta todas as criaturas numa área de um conte de até 21m. A energia escolhida não pode ser mudada. O dano causado é 200% do dano. Custo de mana 50</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Sangramento</nome>
+		<descricao>Toda vez que a criatura conseguir causar dano em sua vítima, ele sofrerá o nível da criatura de dano em adicional.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Veneno</nome>
+		<descricao>Quando a criatura conseguir causar dano em sua vítima ela deverá fazer um teste de vigor CD 15. Se perder perderá 20 de vida por rodada por até que o seu PV fique em 1. Enquanto estiver doente o seu PV não pode ser recuperado. O personagem ficará fraco e de cama incapaz de se levantar sozinho. Somente uma poção de remover status de veneno pode recuperar o personagem.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Subtipo - Fogo</nome>
+		<descricao>Esta criatura é imune a dano de energia de fogo.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Subtipo - Frio</nome>
+		<descricao>Esta criatura é imune a dano de energia de frio/gelo.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Subtipo - Raio</nome>
+		<descricao>Esta criatura é imune a dano de energia de raio/eletricidade.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Subtipo - Profano</nome>
+		<descricao>Esta criatura é imune a dano de energia profana.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Subtipo - Sagrada</nome>
+		<descricao>Esta criatura é imune a dano de energia sagrada.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Cura Fraca</nome>
+		<descricao>Esta criatura tem uma capacidade de recuperar os seus ferimentos. Ela recupera 10 PV por rodada.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Cura Acelerada</nome>
+		<descricao>Esta criatura tem uma capacidade de recuperar os seus ferimentos rapidamente. Ela recupera 50 PV por rodada.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Imortal</nome>
+		<descricao>Esta criatura tem uma capacidade de cura tão alta que somente um único golpe poderoso poderia mata-la. Ela recupera 100 PV por rodada.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Faro</nome>
+		<descricao>Esta criatura sente o cheiro de outras criaturas a kilômetros de distância. Ela sente o faro de criaturas que estejam a até 1Km/nível.</descricao>
+	</habilidade>
+	
+	<habilidade>
+		<nome>Imunidade a magia</nome>
+		<descricao>Criaturas com esta capacidade não são afetadas por nenhum tipo de magia que a especifiquem como alvo. Qualquer magia de alvo lançada sobre ela falhará automáticamente.</descricao>
+	</habilidade>
+	
+	<habilidade>
+		<nome>Percepção às Cegas</nome>
+		<descricao>Criaturas com esta habilidade conseguem perceber o ambiente a sua volta sem o uso da visão.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Regeneração</nome>
+		<descricao>Esta habilidade faz a criatura conseguir recuperar os seus membros (braços, pernas, partes dilaceradas e etc. Menos a cabeça ou outro membro de mesma importância para anatomias diferentes) mesmo que eles sejam decaptados. A regeneração cura a passos vagarosos (5 PV por minuto). Em caso de partes arrancadas, levará dias para se recuperar.</descricao>
+	</habilidade>
+	
+	<habilidade>
+		<nome>Arma naturais</nome>
+		<descricao>As armas naturais que a criatura usa para se defender são mais poderosas que o normal. Seu dano é aumentado em +50%.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Invisibilidade</nome>
+		<descricao>Esta habilidade permite que a criatura fique invisível enquanto permanecer imóvel num mesmo logar.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Deslocamento Superior</nome>
+		<descricao>O deslocamento da criatura é super veloz. Aumenta o seu deslocamento em +3m/nível.</descricao>
+	</habilidade>
+	
+	<habilidade>
+		<nome>Velocidade Ofuscante</nome>
+		<descricao>Por alguns instantes a criatura consegue aumentar consideravelmente a sua velocidade a ponto de realizar mais de um ataque na mesma rodada contra um único alvo. Custo de mana 50</descricao>
+	</habilidade>
+	
+	<habilidade>
+		<nome>Movimento Ofuscante</nome>
+		<descricao>Criaturas com esta habilidade são super velozes. Aumenta a esquiva da criatura em +10%.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Armadura Natural</nome>
+		<descricao>A criatura possui uma camada de pelo forte e rígida que a protege de danos poderosos. Aumenta a sua defesa em +50%.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Longevidade Vital</nome>
+		<descricao>Aumenta os seus pontos de vida em +100%.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Longevidade Ancestral</nome>
+		<descricao>Aumenta os seus pontos de vida em +200%.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Longevidade Imortal</nome>
+		<descricao>Aumenta os seus pontos de vida em +300%.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Invulnerabilidade</nome>
+		<descricao>Criaturas com esta habilidade são praticamente invulneráveis. Apenas ataques superpoderosos podem ferí-la. Depois de reduzir o dano pela defesa, a criatura reduz +50 pontos de dano.</descricao>
+	</habilidade>
+
+	<habilidade>
+		<nome>Indestrutível</nome>
+		<descricao>Criaturas com esta habilidade são praticamente invulneráveis. Apenas ataques superpoderosos podem ferí-la. Depois de reduzir o dano pela defesa, a criatura reduz +100 pontos de dano.</descricao>
+	</habilidade>
+</habilidades>

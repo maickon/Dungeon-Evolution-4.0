@@ -1,0 +1,44 @@
+<div class="col-sm-8 text-left">
+	<h1>Bem vindo <?php echo $_SESSION['nick']; ?></h1>
+
+	<h3>Seus personagens</h3>
+	<div class="row">
+	 	<div class="col-md-12 text-left">            
+		  	<table class="table table-bordered table-hover">
+			    <thead>
+			     	<tr>
+			        	<th>Personagem</th>
+			        	<th>Nível</th>
+			        	<th>Classe</th>
+			        	<th>Especialização</th>
+			        	<th>XP</th>
+			        	<th>Gold</th>
+			        	<th>Abrir inventário</th>
+			      	</tr>
+			    </thead>
+			    <tbody>
+			    <?php foreach ($fichas_xml as $key => $value): ?>
+			    	<tr>
+			        	<td>
+			        		<a href="<?php echo URL_BASE.'ficha/visualizar/'.$value->ficha_nome; ?>">
+							<?php echo $value->ficha_nome; ?>
+							</a>
+						</td>
+			        	<td><?php echo $value->ficha_nivel; ?></td>
+			        	<td><?php echo ucfirst($value->ficha_classe); ?></td>
+			        	<td><?php echo ucfirst($value->ficha_especializacao); ?></td>
+			        	<td><?php echo $value->ficha_xp; ?></td>
+			        	<?php $gold = (float)$value->ficha_dinheiro; ?>
+			        	<td><?php echo number_format($gold); ?></td>
+			        	<td>
+			        		<a href="<?php echo URL_BASE.'ficha/visualizar_inventario/'.$value->ficha_nome; ?>">
+			        			Inventário
+							</a>
+			        	</td>
+			      	</tr>
+			    <?php endforeach ?>
+			    </tbody>
+		  	</table>
+		</div>
+	</div>
+</div>

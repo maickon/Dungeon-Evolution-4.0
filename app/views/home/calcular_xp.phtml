@@ -1,0 +1,26 @@
+<div class="col-sm-8 text-left">
+  <br>
+  <p>Informe o nível dos personagens e calcule o ganho de experiência pela diferença de niveis.</p>
+  <form method="post">
+    <div class="input-group">
+      <span class="input-group-addon">Informe o seu nível do seu personagem</span>
+      <input id="seu_nivel" type="text" class="form-control" value="1" name="seu_nivel" placeholder="Nível">
+    </div>
+    
+    <br>
+
+    <div class="input-group">
+      <span class="input-group-addon">Informe o nível do personagem oponente.</span>
+      <input id="oponente_nivel" type="text" class="form-control" value="1" name="oponente_nivel" placeholder="Nível">
+    </div>
+
+    <br>
+
+    <input type="submit" class="btn .btn-default" value="Calcular">
+  </form>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Resultado</div>
+    <div class="panel-body"><?php echo '<b>'.number_format($xp_ganho). '</b> pontos de experiência.'; ?></div>
+  </div>
+</div>

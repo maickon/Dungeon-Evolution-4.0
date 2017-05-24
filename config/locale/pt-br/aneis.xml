@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<item>
+	<anel>
+		<nome>Anel do Poder</nome>
+		<descricao>O usuário aumenta em *% sua defesa, vida e dano.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Fúria</nome>
+		<descricao>Uma vez por dia você pode entrar numa fúria que aumenta o seu dano em *%. Diferente da fúria bárbara, esta fúria não causa penalidade em sua defesa.</descricao>
+	</anel>
+	
+	<anel>
+		<nome>Anel de Tauron</nome>
+		<descricao>Aumenta o seu dano em +*VF.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel de Escudo</nome>
+		<descricao>Aumenta a sua defesa em +*VF.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Zodiaco</nome>
+		<descricao>Aumenta seu dano, vida, defesa e mana em +*VF.</descricao>
+	</anel>
+
+		<anel>
+		<nome>Anel do Zodiaco Maior</nome>
+		<descricao>Aumenta seu dano, vida, defesa e mana em *%.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Cromático</nome>
+		<descricao>Reduz o custo de mana de suas magias em *M%.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel Infernal</nome>
+		<descricao>Aumenta o dano de suas magaias de fogo em *%.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel Precioso</nome>
+		<descricao>Você consegue vender seus itens por *% mais caro.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel Glacial</nome>
+		<descricao>Aumenta o dano de magias ou habilidade relacionados a frio/gelo em *%.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Mago</nome>
+		<descricao>Aumenta a mana em +*VF.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Sábio</nome>
+		<descricao>Aumenta a sua mana em *%.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Ganancia</nome>
+		<descricao>Você não rola testes de iniciativa para decidir quem pode escolher primeiro itens de uma lista a ser vendido. (Normalmente quando um grupo de personagens chega junto para comprar um item, deve haver uma rolagem de iniciativa para ver quem escolhe primeiro. Com este anel você sempre será o primeiro.)</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da obdiencia</nome>
+		<descricao>Uma vez por dia você pode mandar uma pessoa parar de fazer o que está fazendo. Ela para de fazer o que está fazendo por 1min (É como se ela entrasse em transe). A pessoa fica literalmente parada neste tempo e nem sequer fala. Para fazer isso a vítima deve perder num teste de força de vontade CD 15.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel Galático</nome>
+		<descricao>Magias ou habilidades que causam dano em área aumentam o seu dano em *%.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel Druídico</nome>
+		<descricao>Permite que você consiga entender a linguagem dos animais da floresta e falar com eles. Este anel não funciona com bestas mágicas e monstros.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel Profano</nome>
+		<descricao>Aumeta o dano de magias ou habilidade de origem profana em +*VF.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Titan</nome>
+		<descricao>Aumenta o dano e critico natural em *N% e crítico induzido em *I%. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da brutalidade</nome>
+		<descricao>Aumenta o dano em +*VF.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel Scarlate</nome>
+		<descricao>Aumenta a sua vida em *%.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Contra Ataque</nome>
+		<descricao>Se você conseguir se esquivar de um ataque do seu oponente você consegue realizar um ataque extra contra ele.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Vigor</nome>
+		<descricao>Aumenta a sua vida em +*VF.</descricao>
+	</anel>
+	
+	<anel>
+		<nome>Anel da Tempestade</nome>
+		<descricao>Magias de vento causam *% de dano adicional.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel congelante</nome>
+		<descricao>Habilidades relacionada a frio/gelo causam +*VF de dano adicional.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da aceleração</nome>
+		<descricao>Aumenta o seu deslocamento em +*VF metros.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Velocidade</nome>
+		<descricao>Você tem *V% de chances de realizar uma outra ação na mesma rodada.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da proteção invisivel</nome>
+		<descricao>Aumenta a sua defesa em *% e sua esquiva em *E%</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Aniquilação</nome>
+		<descricao>Uma vez por dia você pode disparar um raio negro que sai do seu dedo contra uma criatura. Você tem *PM% de chance de mata-la.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel Dimensional</nome>
+		<descricao>Este anel permite que você guarde até *qtd objetos com dimensões de até *espaco.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Lâmina Afiada</nome>
+		<descricao>Aumenta a sua chance de crítico natural em *N%.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Ataque Duplo</nome>
+		<descricao>Você tem *PB chance de realizar dois ataques contra um oponente quando for ataca-lo. Não acumulativo e não se combina com habilidades ou magias.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Ataque Triplo</nome>
+		<descricao>Você tem *PB chance de realizar três ataques contra um oponente quando for ataca-lo. Não acumulativo e não se combina com habilidades ou magias</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do ataque poderoso</nome>
+		<descricao>Permite que você reduza +*VF pontos de sua defesa e adicione ao seu dano. Este bônus só termina no seu próximo turno em combate. Obs: Caso a defesa seja reduzida a menos que zero, adicione apenas o seu valor total de defesa.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Magia Poderosa</nome>
+		<descricao>Aumenta o dano de suas magias em +*VF e o crítico natural em *N%. Este bônus é apenas para magias de dano.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Crítico Poderoso</nome>
+		<descricao>Triplica o seu dano total caso acerte um crítico induzido. Efeito não acumulativo.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Cegueira</nome>
+		<descricao>Você tem *PB chance de causar cegueira ao atacar. Deixa o alvo cego por *qtd turnos. Obs.: (Um alvo cego tem 50% de chance de errar um ataque de qualquer natureza, habilidade ou magia que exija uso da visão para atacar.)</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Guerreiro</nome>
+		<descricao>Enquanto estiver utilizando uma arma e um escudo, você receberá um bônus de +*VF no dano e na defesa.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel das Armas Poderosas</nome>
+		<descricao>Enquanto estiver utilizando duas armas, você receberá +*VF dano extra para cada arma que porta.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Destruição</nome>
+		<descricao>Você tem *PM% chance de destruir o seu inimigo com um único ataque. Este efeito se combina com habilidades ou magias que ofereçam chance de destruição automática. Exemplo: Uma magia que tem 4% de chances de destruir um alvo e um efeito de destruição de +2% totalizaria em 6% de chance quando lançasse sua magia. A mesma regra vale para habilidades.Obs. O efeito de destruição não é acumulativo com efeitos de destruição oriundos de outros itens.
+		</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Detonação Ácida</nome>
+		<descricao>Você causa +*VF de dano adicional por ácido quando executa golpes baseados em ataques físicos (habilidades podem ser incluídas). Isso significa que oponentes ou objetos destruídos por você são dissolvidos.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Detonação Elétrica</nome>
+		<descricao>Você causa +*VF de dano adicional por eletricidade. Ataques físicos, magias ou habilidades manifestam uma energia elétrica poderosa que se une a qualquer outro tipo de energia.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Detonação Congelante</nome>
+		<descricao>Você causa +*VF de dano adicional por resfriamento congelante. Seu corpo adere uma temperatura gélida e pessoas próxima a você em até 3m já sentem o frio que você emana. O frio pode variar entre 1° a 20°. Ataques físicos, magias ou habilidades manifestam uma energia gélida congelante que se une a qualquer outro tipo de energia com exceção ao fogo (Neste caso magias ou habilidades oriundas do fogo não recebem o bônus deste anel). </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Detonação de Energia Sônica</nome>
+		<descricao>Você só pode ativar este anel num limite máximo de *qtd vezes por dia. Você escolhe um alvo para causar +*VF dano diretamente na vida. Este anel pode afetar objetos mundano de até 15cm³ e até itens comuns causando a sua destruição instantâneamente.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Detonação Venenosa</nome>
+		<descricao>Este poderoso anel envenena o seu alvo. Ele só pode ser ativado *qtd vezes por dia. Quando você causa dano no seu oponente, ele passa a receber *VBF de dano adicional por veneno a cada rodada que estiver em combate. Caso ele saia do combate a sua perda de vida será de uma em uma hora. Ele precisará remover o status de veneno para parar de perder vida. O dano de veneno não é acumulativo.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Detonação Profana</nome>
+		<descricao>Você causa +*VF de dano adicional por energia profana. Além disso este anel tem *qtd utilizações diárias para usa-lo como cura em si próprio curando *VF pontos de vida. A habilidade de cura só funciona em algozes.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Detonação Sagrada</nome>
+		<descricao>Você causa +*VF de dano adicional por energia sagrada. Além disso este anel tem *qtd utilizações diárias para usa-lo como cura em si próprio ou outros alvos curando *VF pontos de vida.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Golpe Duplo</nome>
+		<descricao>Quando você obtem algum sucesso crítico você causa dano como se estivesse atacado suas vezes. Exemplo: O jogador conseguiu um crítico natural e o seu dano é 100. Ele causará 100 de dano direto nos pontos de vida duas vezes. Caso conseguisse um crítico induzido ele causaria o dobro do dano duas vezes. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Arma Refinada</nome>
+		<descricao>Escolha uma arma que você esteja usando. Este anel aumenta o dano desta arma em +*VF.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Acerto Mortal</nome>
+		<descricao>Duplica o dano causado quando você acerta um crítico natural. Efeito não acumulativo.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Lentidão</nome>
+		<descricao>Você tem *% de chance de causar lentidão no seu alvo ao atacar. Deixa o alvo lento por *qtd turnos, ele faz uma ação, fica a próxima sem fazer nada e na terceira ele ataca novamente e assim por diante. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Paralisia</nome>
+		<descricao>Chance de causar *PB de paralisia quando atacar. Deixa o alvo paralisado por *qtd turnos.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Precisão Sobrenatural</nome>
+		<descricao>Aumenta a sua chance de crítico natural em *PB.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Rompimento Maior</nome>
+		<descricao>Você tem *% chance de matar qualquer morto-vivo com um único golpe.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Sangramento</nome>
+		<descricao>Quando um oponente é atingido, ele fica perdendo pontos de VIDA por *qtd rodadas. Este efeito não é acumulativo. Basta causar o primeiro dano no oponente que ele perderá por rodada o dano sofrido. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel Ameaçador</nome>
+		<descricao>O dano que sempre é causado pelo seu nível passa a ser seu nível vezes *qtd. Efeito não acumulativo. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel de Trespassar</nome>
+		<descricao>Permite que você ataque um outro inimigo caso o último inimigo que você atacou tenha sido derrotado. Você não pode atacar inimigos que se encontram fora do seu alcance de ataque. Você não pode trespassar em mais de um inimigo no mesmo turno.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel de Trespassar Poderoso</nome>
+		<descricao>Quando você derrubar um oponente com sua arma, poderá atacar outro alvo caso este alvo esteja dentro do seu alcance. Esta habilidade poderá ser usada novamente caso o alvo do trespassar tenha caído e assim indefinidamente.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel Pretencio</nome>
+		<descricao>Aumenta o seu Up Level em +*ML para suprir pré-requisitos de utilização de itens. Com isso se você for de nível 3 com +2 de Up Level, você poderá usar um item de nível 5. Obs.: Up Level não é acumulativo com outros efeitos Up Level. Caso tenha mais de um efeito Up Level em outro item, o Up Level mais alto prevalecerá. O máximo de Up Level que o personagem pode ter é 1pt de Up Level para cada 4 níveis. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Veneno</nome>
+		<descricao>Quando você causar dano, você tem *PB chance de deixar o alvo envenenado fazendo ele perder *VBF de vida por *qtd alguns turnos. O veneno não é acumulativo e somente uma magia/poção de cura ou de remover doença pode tirar este status. Um personagem que tenha saído de combate com status de veneno, continuará perdendo vida de 30min em 30min.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Escudo de Sangue</nome>
+		<descricao>Caso você seja alvo de algum acerto crítico, você tem *PB de chance de anular este acerto crítico contra você.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel Defensor</nome>
+		<descricao>Triplica a sua defesa caso entre em modo de defesa. Este efeito não se acumula. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Sorte</nome>
+		<descricao>Aumenta o seu Drop Level (DL) em +*ML. Quando dropar itens você somará o seu DL + o seu nível, assim você terá acesso a itens mais poderoso. Obs.: Mesmo com um DL alto um personagem só poderá usar um item/pedra caso o seu nível seja igual ou menor ou nível do item/pedra. Caso tenha mais de um efeito Drop Level em outro item, o Drop Level mais alto prevalecerá. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Escudo de Mana</nome>
+		<descricao>Ao invés de reduzir a sua vida, se reduz sua mana primeiro. Somente depois de perder o seu bônus de mana, você sofre dano na vida. Este efeito só pode ser usado durante um combate e o personagem gasta uma ação para ativa-lo. Este efeito não é acumulativo, ele não se acumula com outros escudos de MANA. Caso tenha o escudo de mana em mais de um item, o bônus mais alto se sobressai. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Recarga de Vida</nome>
+		<descricao>Ao invés de atacar você pode gastar sua ação para curar *% PVs de até *qtd alvos. Este anel só pode ser usado *qtd vezes por dia. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Elemental de Fogo</nome>
+		<descricao>Dano oriundo de fogo pode ser reduzido por você antes mesmo do dano chegar em sua defesa. Você simplesmente absorve o dano. Você consegue reduzir *VF de dano de fogo.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel do Elemental de Gelo</nome>
+		<descricao>Dano oriundo de gelo/frio pode ser reduzido por você antes mesmo do dano chegar em sua defesa. Você simplesmente absorve o dano. Você consegue reduzir *VF de dano de gelo/frio.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da proteção contra o mal</nome>
+		<descricao>Dano oriundo de energia profana pode ser reduzido por você antes mesmo do dano chegar em sua defesa. Você simplesmente anula o dano. Você consegue reduzir *VF de dano de energia profana.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da proteção contra o bem</nome>
+		<descricao>Dano oriundo de energia sagrada pode ser reduzido por você antes mesmo do dano chegar em sua defesa. Você simplesmente anula o dano. Você consegue reduzir *VF de dano de energia sagrada.</descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Restauração</nome>
+		<descricao>Concede a habilidade de remover o status de cegueira. O personagem pode remover este status normalmente fora de combate. Dentro de combate ele gastará a sua ação para remover. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Restauração</nome>
+		<descricao>Concede a habilidade de remover o status de lentidão. O personagem pode remover este status normalmente fora de combate. Dentro de combate ele gastará a sua ação para remover. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Restauração</nome>
+		<descricao>Concede a habilidade de remover o status de veneno. O personagem pode remover este status normalmente fora de combate. Dentro de combate ele gastará a sua ação para remover. </descricao>
+	</anel>
+
+	<anel>
+		<nome>Anel da Ressureição</nome>
+		<descricao>O personagem ressuscita com *VBF pts de sua vida caso caia em combate (atingir 0 PV ou menos). Caso o personagem esteja em combate com o seu grupo, ele poderá decidir sobre qual turno ele deseja levantar e caso ele decida levantar, deverá rolar um teste de iniciativa no próximo turno para se inteirar no combate. Caso esteja lutando sozinho e tenha caído em combate, você poderá se levantar somente no próximo turno e deverá fazer um teste de iniciativa para saber se sua ação será antes ou depois do inimigo. Mesmo lutando sozinho, caso o jogador queira ele poderá ficar no chão caído e somente levantar quando o inimigo for embora ou se levantar de modo surpresa e tentar atacar pelas costas caso o inimigo abandone o combate pensando que venceu. Mas para isso o jogador precisará passar num teste contra o inimigo para conseguir ataca-lo sem ser visto, se falhar rola-se a iniciativa. Ressurge só funciona uma vez para cada combate e não é acumulativo. </descricao>
+	</anel>
+</item>

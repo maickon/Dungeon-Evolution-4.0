@@ -1,0 +1,43 @@
+<div class="col-sm-8 text-left">
+	<div class="table-responsive">
+  		<h2>Tabela de xp</h2>
+	 	<p>Pontos de experiência para avanço de nível.</p>
+	 	<div class="col-md-6 text-left">            
+		  	<table class="table table-bordered table-hover">
+			    <thead>
+			     	<tr>
+			        	<th>Nível</th>
+			        	<th>Experiência</th>
+			      	</tr>
+			    </thead>
+			    <tbody>
+			    <?php foreach ($tabela_esquerda as $key => $value): ?>
+			    	<tr>
+			        	<td><?php echo $value['nivel']; ?></td>
+			        	<td><?php echo number_format($value['xp']); ?></td>
+			      	</tr>
+			    <?php endforeach ?>
+			    </tbody>
+		  	</table>
+		</div>
+
+	 	<div class="col-md-6 text-left">            
+		  	<table class="table table-bordered table-hover">
+			    <thead>
+			     	<tr>
+			        	<th>Nível</th>
+			        	<th>Experiência</th>
+			      	</tr>
+			    </thead>
+			    <tbody>
+			    <?php foreach ($tabela_direita as $key => $value): ?>
+			    	<tr>
+			        	<td><?php echo $value['nivel']; ?></td>
+			        	<td><?php echo number_format($value['xp']); ?></td>
+			      	</tr>
+			    <?php endforeach ?>
+			    </tbody>
+		  	</table>
+		</div>
+	</div>
+</div>

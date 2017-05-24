@@ -1,0 +1,50 @@
+
+<div class="col-sm-8 text-left">
+	<div class="container">
+	    <div class="row">
+	    	<br>
+	    	<p>Você pode informar um nick e uma senha para guardar suas fichas. Uma vez criado o nick e a senha você não poderá esquecer.</p>
+	        <div class="col-md-offset-3 col-md-3">
+		        <p id="<?php echo $css_msg; ?>"><?php echo $msg; ?></p>
+	            <div class="form-login">
+		            <h4>Criar Sessão</h4>
+		            <form method="post">
+			            <input type="text" id="userName" class="form-control input-sm chat-input" name="username" placeholder="Nick" />
+			            </br>
+			            <input type="password" id="userPassword" class="form-control input-sm chat-input" name="password" placeholder="Senha" />
+			            </br>
+			            <input type="password" id="userPasswordConfirm" class="form-control input-sm chat-input" name="passwordConfirm" placeholder="Confirmar Senha" />
+			            </br>
+			            <div class="wrapper">
+				            <span class="group-btn">     
+				                <input type="submit" class="btn btn-primary btn-md" name="btn_criar" value="Criar Conta">
+				            </span>
+		            	</div>
+		            </form>
+	        	</div>
+	        </div>
+
+	        <div class="col-md-offset-4 col-md-3">
+	        	<h3>Ou</h3>
+	        	<br>
+	        </div>
+
+	        <div class="col-md-offset-3 col-md-3">
+	            <div class="form-login">
+		            <h4>Logar</h4>
+		            <form method="post">
+			            <input type="text" id="userName" class="form-control input-sm chat-input" name="username" placeholder="Nick" />
+			            </br>
+			            <input type="text" id="userPassword" class="form-control input-sm chat-input" name="password" placeholder="Senha" />
+			            </br>
+			            <div class="wrapper">
+				            <span class="group-btn">     
+				                <input type="submit" class="btn btn-primary btn-md" name="btn_logar" value="Logar">
+				            </span>
+		            	</div>
+	            	</form>
+	        	</div>
+	        </div>
+	    </div>
+	</div>
+</div>

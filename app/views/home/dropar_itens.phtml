@@ -1,0 +1,225 @@
+<div class="col-sm-8 text-left">
+	<br>
+	<form method="post">
+    	<div class="form-horizontal row">
+	    	<div class="col-md-2">
+				<label for="raridade">Raridade:</label>
+				<select class="form-control" id="raridade" name="raridade">
+	    			<option value="todas_as_raridades">Todos</option>
+	    			<option value="comum">Comum</option>
+	    			<option value="mágico">Mágico</option>
+	    			<option value="raro">Raro</option>
+	    			<option value="lendário">Lendário</option>
+	    			<option value="único">Único</option>
+				</select>
+			</div>
+
+			<div class="col-md-2">
+				<label for="item">Item:</label>
+				<select class="form-control" id="item" name="item">
+	    			<option value="todos_os_itens">Todos</option>
+	    			<option value="todas_as_armas">Todas as Armas</option>
+	    			<option value="arma_de_uma_mao">Armas de 1 mão</option>
+	    			<option value="arma_de_duas_maos">Armas de 2 mãos</option>
+	    			<option value="armaduras">Armaduras</option>
+	    			<option value="aneis">Anéis</option>
+	    			<option value="botas">Botas</option>
+	    			<option value="calcas">Calças</option>
+	    			<option value="capacetes">Capacetes</option>
+	    			<option value="escudos">Escudos</option>
+	    			<option value="luvas">Luvas</option>
+	    			<option value="ombreiras">Ombreiras</option>
+				</select>
+			</div>
+
+			<div class="col-md-2">
+				<label for="pedras">Com pedras:</label>
+				<select class="form-control" id="pedras" name="pedras">
+	    			<option value="sim">Sim</option>
+	    			<option value="nao">Não</option>
+				</select>
+			</div>
+
+			<div class="col-md-2">
+				<label for="nivel_fixo">Lv fixo:</label>
+				<select class="form-control" id="nivel_fixo" name="nivel_fixo">
+	    			<option value="nao">Não</option>
+	    			<option value="sim">Sim</option>
+				</select>
+			</div>
+
+			<div class="col-md-1">
+				<label for="quantidade">Qtd</label>
+				<input class="form-control" maxlength="2" value="4" id="quantidade" type="text" name="qtd">
+			</div>
+
+			<div class="col-md-1">
+				<label for="nivel">Nível</label>
+				<input class="form-control" maxlength="2" id="nivel" type="text" value="1" name="nivel">
+			</div>
+
+			<div class="col-md-2">
+				<label for="nivel"><br></label>
+				<br>
+				<input type="submit" name="dropar" value="Dropar" class="btn btn-default">
+			</div>
+		</div>
+	</form>
+	<div class="row">
+		<div class="col-md-12" id="exportar-itens">
+		<?php 
+		$raridade_css_lista = ['mágico'=>'mag','comum'=>'com','raro'=>'rar','lendário'=>'len','único'=>'uni'];
+		foreach ($exibir_itens as $key => $value) {
+			$raridade_css = $raridade_css_lista[$value->_get('raridade')];
+			if (get_class($value) == 'Aneis_Model') {
+				$preco = number_format($value->_get('preco'), 2, ',', '.').' gold';
+				$preco_venda = number_format(intval($value->_get('preco')/2), 2, ',', '.').' gold';
+				$pedras = $value->_get('pedras');
+				if (is_object($pedras)) {
+					$css_class = 'col-md-6';
+				} else {
+					$css_class = 'col-md-9';
+				}
+				echo '
+				<div class="list-group col-md-12 '.$raridade_css.'">
+					<div class="col-md-3">
+						<div class="titulo">'			.$value->_get('anel')->nome.		'</div>
+						<div><b> Lv </b>'				.$value->_get('nivel').				'</div>
+						<div><b> Raridade: </b>'		.$value->_get('raridade').			'</div>
+				  		<div><b> Encaixes: </b>'		.$value->_get('encaixes').			'</div>
+				  		<div><b> Pedras: </b>'			.$value->_get('pedras_encaixadas').	'</div>
+				  		<div><b> Compra: </b>'			.$preco.							'</div>
+				  		<div><b> Venda: </b>'			.$preco_venda.						'</div>
+					</div>
+					
+					<div class="'.$css_class.' descricao-anel">
+						<div><b> Descricao: </b>'		.$value->_get('anel')->descricao.	'</div>
+					</div>';
+
+		  			if (is_object($pedras)) {
+						$pedras->pedra_show();
+						$habilidades = $pedras->_get('habilidades');
+	  				}
+	  				
+	  				if (isset($_SESSION['nick']) and isset($_SESSION['ficha'])) {
+	  					echo '
+	  					<div class="col-md-12">
+	  					<br>
+		  				<form action="'.URL_BASE.'ficha/inventario" method="post" target="_blank">
+		  					<input type="hidden" name="item[id]" value="'.uniqid(mt_rand(), true).'">
+							<input type="hidden" name="item[nome]" value="'.$value->_get('anel')->nome.'">
+							<input type="hidden" name="item[tipo]" value="Anel">
+							<input type="hidden" name="item[nivel]" value="'.$value->_get('nivel').'">
+							<input type="hidden" name="item[raridade]" value="'.$value->_get('raridade').'">
+							<input type="hidden" name="item[encaixes]" value="'.$value->_get('encaixes').'">
+							<input type="hidden" name="item[pedras_encaixadas]" value="'.$value->_get('pedras_encaixadas').'">
+							<input type="hidden" name="item[preco_compra]" value="'.$value->_get('preco').'">
+							<input type="hidden" name="item[descricao]" value="'.$value->_get('anel')->descricao.'">';
+			  			if (is_object($pedras)) {
+							echo '
+								<input type="hidden" name="pedras[pedra0][nome]" value="'.$pedras->_get('nome').'">
+								<input type="hidden" name="pedras[pedra0][nivel]" value="'.$pedras->_get('nivel').'">
+								<input type="hidden" name="pedras[pedra0][raridade]" value="'.$pedras->_get('raridade').'">
+								<input type="hidden" name="pedras[pedra0][preco_compra]" value="'.$pedras->_get('preco').'">';
+							foreach ($habilidades as $key => $value) {
+								echo '<input type="hidden" name="pedras[pedra0][habilidade'.$key.']" value="'.$value.'">';
+							}
+						}
+		  				echo '
+		  					<input type="submit" name="add" value="Add ao iventário" class="btn btn-default">
+		  					</form>
+		  				</div>
+		  				';
+	  				}
+				echo '</div>';
+			} elseif (get_class($value) == 'Itens_Model') {
+				$pedras_inventario = [];
+				$preco = number_format($value->_get('preco'), 2, ',', '.').' gold';
+				$preco_venda = number_format(intval($value->_get('preco')/2), 2, ',', '.').' gold';
+				$tipo = ucfirst(str_replace('_', ' ', $value->_get('tipo_item')));
+				$value->item_encaixar_pedra();
+				echo '
+				<div class="list-group col-md-12 '.$raridade_css.'">
+					<div class="col-md-3">
+						<div class="titulo">'				.$value->_get('nome').				'</div>
+						<div><b> Lv </b>'					.$value->_get('nivel').				'</div>
+						<div><b> Raridade: </b>'			.$value->_get('raridade').			'</div>
+				  		<div><b> Tipo: </b>'				.$tipo.								'</div>
+				  		<div><b> Bônus: </b>'				.$value->_get('bonus').				'</div>
+				  		<div><b> Compra: </b>'				.$preco.							'</div>
+				  		<div><b> Venda: </b>'				.$preco_venda.						'</div>
+				  		<div><b> Encaixes: </b>'			.$value->_get('encaixes').			'</div>
+						<div><b>Pedras Encaixadas: </b>'	.$value->_get('pedras_encaixadas').	'</div>
+				  	</div>';
+		  			$pedras = $value->_get('pedras');
+		  			if (isset($pedras) and is_array($pedras)) {
+		  				foreach ($pedras as $pedras_key1 => $pedras_value1) {
+		  					$pedras_value1->pedra_show();
+		  					$pedras_inventario[] = [
+		  						'nome' => $pedras_value1->_get('nome'),
+		  						'nivel' => $pedras_value1->_get('nivel'),
+		  						'raridade' => $pedras_value1->_get('raridade'),
+		  						'preco_compra' => $pedras_value1->_get('preco'),
+								'habilidades' => $pedras_value1->_get('habilidades')
+		  					];
+		  				}
+		  			} elseif (is_object($pedras)) {
+	  					$pedras->pedra_show();
+						$habilidades = $pedras->_get('habilidades');
+	  				}
+
+	  				if (isset($_SESSION['nick']) and isset($_SESSION['ficha'])) {
+	  					echo '
+	  					<div class="col-md-12">
+	  					<br>
+		  				<form action="'.URL_BASE.'ficha/inventario" method="post" target="_blank">
+							<input type="hidden" name="item[id]" value="'.uniqid(mt_rand(), true).'">
+							<input type="hidden" name="item[nome]" value="'.$value->_get('nome').'">
+							<input type="hidden" name="item[tipo]" value="'.$tipo.'">
+							<input type="hidden" name="item[nivel]" value="'.$value->_get('nivel').'">
+							<input type="hidden" name="item[raridade]" value="'.$value->_get('raridade').'">
+							<input type="hidden" name="item[encaixes]" value="'.$value->_get('encaixes').'">
+							<input type="hidden" name="item[pedras_encaixadas]" value="'.$value->_get('pedras_encaixadas').'">
+							<input type="hidden" name="item[preco_compra]" value="'.$value->_get('preco').'">';
+			  			if (isset($pedras) and is_array($pedras)) {
+			  				foreach ($pedras_inventario as $key_inventario => $value_inventario) {
+			  					foreach ($value_inventario as $key_inventario2 => $value_inventario2) {
+									if (is_array($value_inventario2)) {
+										foreach ($value_inventario2 as $habilidade_key => $habilidade_value) {
+											echo '<input type="hidden" name="pedras[pedra'.$key_inventario.'][habilidade'.$habilidade_key.']" value="'.$habilidade_value.'">';
+										}	
+				  					} else {
+				  						echo '<input type="hidden" name="pedras[pedra'.$key_inventario.']['.$key_inventario2.']" value="'.$value_inventario2.'">';
+				  					}
+			  					} 
+			  				}
+			  			} elseif (is_object($pedras)) {
+							echo '
+								<input type="hidden" name="pedras[pedra0][nome]" value="'.$pedras->_get('nome').'">
+								<input type="hidden" name="pedras[pedra0][nivel]" value="'.$pedras->_get('nivel').'">
+								<input type="hidden" name="pedras[pedra0][raridade]" value="'.$pedras->_get('raridade').'">
+								<input type="hidden" name="pedras[pedra0][preco_compra]" value="'.$pedras->_get('preco').'">';
+							foreach ($habilidades as $pedras_key2 => $pedras_value2) {
+								echo '<input type="hidden" name="pedras[pedra0][habilidade'.$pedras_key2.']" value="'.$pedras_value2.'">';
+							}
+						}
+		  				echo '
+		  					<input type="submit" name="add" value="Add ao iventário" class="btn btn-default">
+		  					</form>
+		  				</div>
+		  				';
+	  				}
+				echo '</div>';
+			}
+		}
+
+		echo '
+			<div class="col-md-12">
+				<div id="previewImage">
+				</div>
+			</div>';
+		?>
+		</div>
+	</div>
+</div>
+			

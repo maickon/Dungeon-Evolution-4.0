@@ -1,0 +1,203 @@
+<div class="col-sm-8 text-left">
+	<div class="row">
+		<div class="col-md-12">
+			<br>
+			<h2>Inventário de <b><a href="<?php echo URL_BASE.'ficha/visualizar/'.$_SESSION['ficha']; ?>"><?php echo $_SESSION['ficha'] ?></a></b></h2>
+	 		<p>Ao clicar em vender item você adicionará o valor de venda do item ao seu dinheiro total. Se clicar em jogar fora você perde o item.</p>
+	 			
+	 		<?php 
+	 		$raridade_css_lista = ['mágico'=>'mag','comum'=>'com','raro'=>'rar','lendário'=>'len','único'=>'uni'];
+	 		foreach ($inventario_xml as $key => $value):
+	 			$raridade 	= $value->item->raridade;
+	 			$preco 		= ($value->item->preco_compra/2);
+				echo '<div class="col-md-12 item_ficha '.$raridade_css_lista[(string)$raridade].'">';
+	 			foreach ($value as $item_key => $item_value): 
+	 				if ($item_key == 'item'): ?>
+						<div class="row">
+							<div class="col-md-5">
+								<label for="item_nome">Nome</label>
+								<input class="form-control input-sm" value="<?php echo ucfirst($item_value->nome); ?>" id="item_nome" type="text" name="item_nome">
+							</div>
+							<div class="col-md-1">
+								<label for="item_lv">Lv</label>
+								<input class="form-control input-sm center" maxlength="2" value="<?php echo $item_value->nivel; ?>" id="item_nivel" type="text" name="item_nivel">
+							</div>
+							<div class="col-md-3">
+							<label for="item_raridade">Raridade:</label>
+							<select class="form-control input-sm" id="item_raridade" name="item_raridade">
+								<option value="comum" 		<?php echo($item_value->raridade == 'comum')		? 'selected' : ''; ?>>Comum</option>
+								<option value="magico" 		<?php echo($item_value->raridade == 'mágico')		? 'selected' : ''; ?>>Mágico</option>
+								<option value="raro" 		<?php echo($item_value->raridade == 'raro')			? 'selected' : ''; ?>>Raro</option>
+								<option value="lendario" 	<?php echo($item_value->raridade == 'lendário')		? 'selected' : ''; ?>>Lendário</option>
+								<option value="unico" 		<?php echo($item_value->raridade == 'único')		? 'selected' : ''; ?>>Único</option>
+							</select>
+							</div>
+							<div class="col-md-3">
+								<label for="item_tipo">Tipo:</label>
+								<input class="form-control input-sm" value="<?php echo $item_value->tipo; ?>" id="item_tipo" type="text" name="item_tipo">
+							</div>
+							<div class="col-md-3">
+								<label for="item_preco_compra">Preço de compra</label>
+								<input class="form-control input-sm center" value="<?php echo $item_value->preco_compra; ?>" id="item_preco_compra" type="number" name="item_preco_compra">
+							</div>
+							<div class="col-md-3">
+								<label for="item_preco_venda">Preço de venda</label>
+								<input class="form-control input-sm center" value="<?php echo ($item_value->preco_compra/2); ?>" id="item_preco_venda" type="number" name="item_preco_venda">
+							</div>
+							<?php if ($item_value->tipo != 'pocoes' and $item_value->tipo != 'pedras'): ?>
+								<div class="col-md-3">
+									<label for="item_encaixes">Encaixes:</label>
+									<select class="form-control input-sm" id="item_encaixes" name="item_encaixes">
+										<option value="0" <?php echo($item_value->encaixes == '0')	? 'selected' : ''; ?>>0</option>
+										<option value="1" <?php echo($item_value->encaixes == '1')	? 'selected' : ''; ?>>1</option>
+										<option value="2" <?php echo($item_value->encaixes == '2')	? 'selected' : ''; ?>>2</option>
+										<option value="3" <?php echo($item_value->encaixes == '3')	? 'selected' : ''; ?>>3</option>
+									</select>
+								</div>
+								<div class="col-md-3">
+									<label for="item_pedras_encaixadas_">Pedras encaixadas:</label>
+									<select class="form-control input-sm" id="item_pedras_encaixadas_" name="item_pedras_encaixadas_">
+										<option value="0" <?php echo($item_value->pedras_encaixadas == '0')	? 'selected' : ''; ?>>0</option>
+										<option value="1" <?php echo($item_value->pedras_encaixadas == '1')	? 'selected' : ''; ?>>1</option>
+										<option value="2" <?php echo($item_value->pedras_encaixadas == '2')	? 'selected' : ''; ?>>2</option>
+										<option value="3" <?php echo($item_value->pedras_encaixadas == '3')	? 'selected' : ''; ?>>3</option>
+									</select>
+								</div>
+							<?php endif ?>
+
+							<?php if ($item_value->tipo == 'pocoes'): ?>
+								<div class="col-md-12">
+									<label for="item_descricao">Descrição</label>
+									<textarea class="form-control" style="height: auto;" name="item_historia" id="item_historia"><?php echo $item_value->descricao; ?></textarea>
+								</div>
+							<?php endif ?>
+
+							<?php if ($item_value->tipo == 'pedras'): ?>
+								<div class="col-md-6">	
+				                	<label for="item_habilidade1">Habilidade 1</label>
+				                	<input class="form-control input-sm" value="<?php echo ($item_value->habilidade0); ?>" id="item_habilidade1" type="text" name="item_habilidade1">
+				               	</div>
+								<div class="col-md-6">	
+				                	<label for="item_habilidade2">Habilidade 2</label>
+				                	<input class="form-control input-sm" value="<?php echo ($item_value->habilidade1); ?>" id="item_habilidade2" type="text" name="item_habilidade2">
+				               	</div>
+							<?php endif ?>
+						</div>
+	 				<?php 
+	 				endif; 
+
+		 			if($item_key == 'pedras'): 
+		 				foreach ($item_value as $pedra_key => $pedra_value) { 
+		 					$preco += ($pedra_value->preco_compra/2); ?>
+							<div class="row">
+				            	<div class="col-md-3">
+				                	<label for="item_pedra_nome">Pedra:</label>
+				                	<select class="form-control input-sm" id="item_pedra_nome" name="item_pedra_nome">
+				                		<option value="nenhuma" 	<?php echo($pedra_value->nome == 'nenhuma')		? 'selected' : ''; ?>>Nenhuma</option>
+				                		<option value="rubi" 		<?php echo($pedra_value->nome == 'rubi')		? 'selected' : ''; ?>>Rubi</option>
+				                		<option value="esmeralda" 	<?php echo($pedra_value->nome == 'esmeralda')	? 'selected' : ''; ?>>Esmeralda</option>
+				                		<option value="safira" 		<?php echo($pedra_value->nome == 'safira')		? 'selected' : ''; ?>>Safira</option>
+				                		<option value="topazio" 	<?php echo($pedra_value->nome == 'topazio')		? 'selected' : ''; ?>>Tópázio</option>
+				                		<option value="ametista" 	<?php echo($pedra_value->nome == 'ametista')	? 'selected' : ''; ?>>Ametista</option>
+				                		<option value="diamante" 	<?php echo($pedra_value->nome == 'diamante')	? 'selected' : ''; ?>>Diamante</option>
+				                		<option value="opala" 		<?php echo($pedra_value->nome == 'opala')		? 'selected' : ''; ?>>Opala</option>
+				                	</select>
+				                </div>
+				                <div class="col-md-3">
+				                	<label for="item_pedra_lv">Lv</label>
+				                	<input class="form-control input-sm" maxlength="2" value="<?php echo $pedra_value->nivel; ?>" id="item_pedra_nivel" type="text" name="item_pedra_nivel">
+				                </div>
+				                <div class="col-md-3">	
+				                	<label for="item_pedra_compra">Compra</label>
+				                	<input class="form-control input-sm" value="<?php echo $pedra_value->preco_compra; ?>" id="item_pedra_compra" type="text" name="item_pedra_compra">
+				               	</div>
+				                <div class="col-md-3">	
+				                	<label for="item_pedra_venda">Venda</label>
+				                	<input class="form-control input-sm" value="<?php echo ($pedra_value->preco_compra/2); ?>" id="item_pedra_venda" type="text" name="item_pedra_venda">
+				               	</div>
+								<div class="col-md-6">	
+				                	<label for="item_pedrahabilidade1">Habilidade 1</label>
+				                	<input class="form-control input-sm" value="<?php echo ($pedra_value->habilidade0); ?>" id="item_pedrahabilidade1" type="text" name="item_pedrahabilidade1">
+				               	</div>
+								<div class="col-md-6">	
+				                	<label for="item_pedrahabilidade2">Habilidade 2</label>
+				                	<input class="form-control input-sm" value="<?php echo ($pedra_value->habilidade1); ?>" id="item_pedrahabilidade2" type="text" name="item_pedrahabilidade2">
+				               	</div>
+				            </div>
+		 		<?php	}
+	 				endif;
+	 			endforeach; 
+	 			$id 		= $value->item->id;
+	 			$nome 		= $value->item->nome;
+	 			$preco 		= (float)($preco);
+	 			$tipo 		= $value->item->tipo;
+	 			echo '
+	 				<br>
+	 				<form action="#" method="post">
+						<input type="hidden" name="id_item" value="'.$id.'">
+		 				<div class="row">
+							<div class="col-md-2 menu_ficha">
+								<input type="button" name="vender" value="Vender Item" class="btn btn-default" data-toggle="modal" data-target="#'.md5($id).'">
+							</div>
+							<div class="col-md-4 menu_ficha">
+								<input type="button" name="lixo" value="Jogar fora" class="btn btn-default" data-toggle="modal" data-target="#'.md5($nome).'">
+							</div>
+						</div>
+	 				</form>
+
+	 				<div id="'.md5($id).'" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+
+					    <!-- Modal content-->
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal">&times;</button>
+					        <h4 class="modal-title">Você tem certeza que deseja vender este item?</h4>
+					      </div>
+					      <div class="modal-body">
+					        <p>Nome: '.$nome.'</p>
+					        <p>Raridade: '.$raridade.'</p>
+					        <p>Valor de Venda: '.number_format($preco, 2, ',', '.').' Gold</p>
+					        <p>Tipo: '.$tipo.'</p>
+					        <p>Quando um item é vendido o seu valor de venda será adicionado a riqueza total do seu personagem.</p>
+					      </div>
+					      <div class="modal-footer">
+					        <a href="'.URL_BASE.'ficha/vender_item_inventario/'.strtolower($tipo).'/'.$preco.'/'.$id.'" class="btn btn-default">Vender</a>
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Voltar</button>
+					      </div>
+					    </div>
+
+					  </div>
+					</div>
+
+					<div id="'.md5($nome).'" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+
+					    <!-- Modal content-->
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal">&times;</button>
+					        <h4 class="modal-title">Você tem certeza que deseja jogar este item fora?</h4>
+					      </div>
+					      <div class="modal-body">
+					        <p>Nome: '.$nome.'</p>
+					        <p>Raridade: '.$raridade.'</p>
+					        <p>Valor de Venda: '.number_format($preco, 2, ',', '.').' Gold</p>
+					        <p>Tipo: '.$tipo.'</p>
+					        <p>Quando um item é jogado fora ele é deletado por completo do inventário e não será mais possível recupera-lo pelo sistema.</p>
+					      </div>
+					      <div class="modal-footer">
+					        <a href="'.URL_BASE.'ficha/deletar_item_inventario/'.strtolower($tipo).'/'.$id.'" class="btn btn-default">Jogar fora</a>
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Voltar</button>
+					      </div>
+					    </div>
+
+					  </div>
+					</div>
+	 			</div>
+	 			'; 
+	 		endforeach; 
+	 		?>
+		</div>
+	</div>
+</div>
