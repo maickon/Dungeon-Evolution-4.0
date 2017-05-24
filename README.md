@@ -1,7 +1,5 @@
 
-<center>
-	![Tela Principal](app/assets/img/prints/logo.png)
-</center>
+<div style="text-align:center"><img src ="app/assets/img/prints/logo.png" /></div>
 
 O Dungeon Evolution é um sistema de RPG que funciona em conjunto com um site que oferece diversas ferramentas para o uso dos jogadores. Diferente dos demais RPGs de mesa encontrados por aí, no Dungeon Evolution os jogadores recebem os seus equipamentos através de um sistema de sorteio que o próprio site oferece. 
 
